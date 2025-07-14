@@ -1,11 +1,13 @@
 body{
-    width:100%;
+    width:90%;
     height:100%;
     background-color: #E5E3D9;
     color: black;
     font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+}
+div {
+    border: 2px black solid;
 }
 div p {
     margin-right: 10px;
@@ -21,6 +23,7 @@ div p {
     width: 100%;
     margin:0;
 }
+
 button {
     padding: 5px;
     height: 2em;
