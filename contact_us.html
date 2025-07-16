@@ -21,6 +21,10 @@
         min-height: 100vh;
     }
     
+    h1, h2 {
+        text-align: center;
+    }
+    
     div {
         border: 0;
     }
@@ -39,7 +43,7 @@
         padding: 20px;
     }
     
-    input[type=text], select, textarea {
+    input[type=text], input[type=email], select, textarea {
         width: 100%; 
         padding: 12px; 
         border: 1px solid #ccc;
@@ -74,6 +78,8 @@
         <p>Home</p>
     </div>
 
+    <h1>Let’s Start a Conversation!</h1> 
+    <h2>Ask how we can help you:</h2>
     <div class="container">
     <form action="">
 
@@ -88,17 +94,14 @@
         </div>
 
         <div class="input-box">
-            <label for="country">Country (will remove)</label>
-            <select id="country" name="country">
-                <option value="none">-</option>
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
         </div>
 
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <div class="input-box">
+            <label for="subject">Message</label>
+            <textarea id="text" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+        </div>
 
         <input type="submit" value="Submit">
 
