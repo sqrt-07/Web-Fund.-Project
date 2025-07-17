@@ -40,7 +40,7 @@ div {   /*remove later, this is so i can see the div box arrangements and size*/
     justify-content:space-evenly;
 }
 .featuredImg {
-    /*figure out how to split width evenly between the 3 divs*/
+    /*readjust image and div size to fit different viewport sizes*/
     width: 200px;
     height: 3em;
     vertical-align: middle;
