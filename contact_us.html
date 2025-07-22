@@ -66,6 +66,17 @@
         background-color: #45a049;
     }
 
+    .popup {
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 14px;
+        display: none;
+        z-index: 10;
+        pointer-events: none;
+    }
+
 </style>
 
 <body>
@@ -84,17 +95,20 @@
 
         <div class="input-box">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." onmouseover="showPopup(event, 'Your first name (Leave this field empty to stay anonymous)')"
+           onmouseout="hidePopup()">
         </div>
 
         <div class="input-box">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." onmouseover="showPopup(event, 'Your last name (Leave this field empty to stay anonymous)')"
+           onmouseout="hidePopup()">
         </div>
 
         <div class="input-box">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Your email.." required>
+            <input type="email" id="email" name="email" placeholder="Your email.." required onmouseover="showPopup(event, 'Your e-mail')"
+           onmouseout="hidePopup()">
         </div>
 
         <div class="input-box">
@@ -105,6 +119,22 @@
         <input type="submit" value="Submit">
 
     </form>
+
+    <div id="popup" class="popup"></div>
+
+    <script>
+        function showPopup(e, text) {
+        const popup = document.getElementById('popup');
+        popup.textContent = text;
+        popup.style.top = (e.clientY + 10) + 'px';
+        popup.style.left = (e.clientX + 10) + 'px';
+        popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+        }
+    </script>
  </div>
 </body>
 </html>
