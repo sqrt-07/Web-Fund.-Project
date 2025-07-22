@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Sign In / Register</title>
+  <style>
+    .form-box {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .form-box button {
+      background-color: #565C56;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #333;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      color: green;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <button class="register">Register</button> 
+    <button class="sign-in">Sign In</button>
+    <p><a href="contact_us.html">Contact Us</a></p>
+    <p><a href="recipes.html">Recipes</a></p>
+    <p><a href="home.html">Home</a></p>
+  </div>
+
+  <!-- Registration Form -->
+  <div class="form-box" id="register-box">
+    <h2>Register</h2>
+    <input type="text" id="reg-name" placeholder="Full Name" required />
+    <input type="email" id="reg-email" placeholder="Email" required />
+    <input type="password" id="reg-pass" placeholder="Password" required />
+    <input type="password" id="reg-confirm" placeholder="Confirm Password" required />
+    <p id="reg-error" class="error"></p>
+    <button onclick="register()">Sign Up</button>
+  </div>
+
+  <!-- Sign In Form -->
+  <div class="form-box" id="login-box">
+    <h2>Sign In</h2>
+    <input type="email" id="login-email" placeholder="Email" required />
+    <input type="password" id="login-pass" placeholder="Password" required />
+    <p id="login-error" class="error"></p>
+    <button onclick="login()">Login</button>
+    <p class="message" id="login-success"></p>
+  </div>
+
+  <script>
+    function register() {
+      const name = document.getElementById("reg-name").value.trim();
+      const email = document.getElementById("reg-email").value.trim();
+      const pass = document.getElementById("reg-pass").value;
+      const confirm = document.getElementById("reg-confirm").value;
+      const error = document.getElementById("reg-error");
+
+      error.textContent = "";
+
+      if (!name || !email || !pass || !confirm) {
+        error.textContent = "Please fill out all fields.";
+        return;
+      }
+
+      if (pass !== confirm) {
+        error.textContent = "Passwords do not match.";
+        return;
+      }
+
+      localStorage.setItem("registeredEmail", email);
+      localStorage.setItem("registeredPass", pass);
+      alert("Registration successful! Now you can log in.");
+      document.getElementById("reg-name").value = "";
+      document.getElementById("reg-email").value = "";
+      document.getElementById("reg-pass").value = "";
+      document.getElementById("reg-confirm").value = "";
+    }
+
+    function login() {
+      const email = document.getElementById("login-email").value.trim();
+      const pass = document.getElementById("login-pass").value;
+      const error = document.getElementById("login-error");
+      const success = document.getElementById("login-success");
+
+      error.textContent = "";
+      success.textContent = "";
+
+      const regEmail = localStorage.getItem("registeredEmail");
+      const regPass = localStorage.getItem("registeredPass");
+
+      if (email === regEmail && pass === regPass) {
+        success.textContent = `Welcome, ${email}! You have successfully logged in.`;
+      } else {
+        error.textContent = "Invalid email or password.";
+      }
+    }
+  </script>
+</body>
+</html>
