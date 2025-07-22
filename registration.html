@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registration</title>
+  <title>registration</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
@@ -69,7 +69,7 @@
       margin:0;
     }
 
-    .nav p, .nav a button {
+    .nav a button {
       margin-right: 10px;
       padding: 10px;
       color: white;
@@ -82,6 +82,11 @@
     .nav a {
       color: white;
       text-decoration: none;
+    }
+
+    #logout-btn {
+      background-color: #aa4444;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -110,6 +115,7 @@
     <p class="error" id="login-error"></p>
     <p class="success" id="login-success"></p>
     <button onclick="login()">Login</button>
+    <button onclick="logout()" id="logout-btn" style="display: none;">Sign Out</button>
   </div>
 
   <script>
@@ -142,6 +148,7 @@
       const pass = document.getElementById("login-pass").value;
       const error = document.getElementById("login-error");
       const success = document.getElementById("login-success");
+      const logoutBtn = document.getElementById("logout-btn");
 
       error.textContent = "";
       success.textContent = "";
@@ -151,10 +158,26 @@
 
       if (email === regEmail && pass === regPass) {
         success.textContent = `Welcome, ${email}! You have successfully logged in.`;
+        localStorage.setItem("loggedIn", "true");
+        logoutBtn.style.display = "block";
       } else {
         error.textContent = "Invalid email or password.";
       }
     }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      document.getElementById("login-success").textContent = "";
+      document.getElementById("logout-btn").style.display = "none";
+      alert("You have been signed out.");
+    }
+
+    window.onload = function () {
+      if (localStorage.getItem("loggedIn") === "true") {
+        document.getElementById("logout-btn").style.display = "block";
+        document.getElementById("login-success").textContent = "You are already logged in.";
+      }
+    };
   </script>
 </body>
 </html>
