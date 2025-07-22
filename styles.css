@@ -63,6 +63,21 @@ h1{
     width: 100%;
     background-color: green;
 }
+.descriptionBox {
+    height: 500px;
+    background-image: url("images/food-spread2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-content: center;
+}
+.descriptionText {
+    width:fit-content; 
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgba(229, 227, 217, 0.7);
+}
 .featuredRecipe {
     display: flex;
     justify-content:space-evenly;
