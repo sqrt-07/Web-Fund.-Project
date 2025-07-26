@@ -77,6 +77,11 @@
         pointer-events: none;
     }
 
+    body {
+        overflow-y: hidden;
+    }
+
+
 </style>
 
 <body>
@@ -92,29 +97,30 @@
     <h1>Let’s Start a Conversation!</h1> 
     <h2>Ask how we can help you:</h2>
     <div class="container">
-    <form action="">
+    <form name="contact-form" action="" method="post" autocomplete="off">
+
+        <p class="success register-success"></p>
 
         <div class="input-box">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." onmouseover="showPopup(event, 'Your first name (Leave this field empty to stay anonymous)')"
-           onmouseout="hidePopup()">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
         </div>
 
         <div class="input-box">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name.." onmouseover="showPopup(event, 'Your last name (Leave this field empty to stay anonymous)')"
-           onmouseout="hidePopup()">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
         </div>
 
         <div class="input-box">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Your email.." required onmouseover="showPopup(event, 'Your e-mail')"
-           onmouseout="hidePopup()">
+            <input type="email" id="email" name="email" placeholder="Your email..">
+           <p class="error email-error"></p>
         </div>
 
         <div class="input-box">
-            <label for="subject">Message</label>
-            <textarea id="text" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="text" name="message" placeholder="Write something.." style="height:200px"></textarea>
+            <p class="error message-error"></p>
         </div>
 
         <input type="submit" value="Submit">
@@ -123,18 +129,40 @@
 
     <div id="popup" class="popup"></div>
 
+    
     <script>
-        function showPopup(e, text) {
-        const popup = document.getElementById('popup');
-        popup.textContent = text;
-        popup.style.top = (e.clientY + 10) + 'px';
-        popup.style.left = (e.clientX + 10) + 'px';
-        popup.style.display = 'block';
+        function showError(errorElement, errorMessage){
+    document.querySelector("."+errorElement).classList.add("display-error");
+    document.querySelector("."+errorElement).innerHTML = errorMessage;
+    }
+
+        function clearError(){
+            let errors = document.querySelectorAll(".error");
+            for(let error of errors){
+                error.classList.remove("display-error");
+            }
         }
 
-        function hidePopup() {
-        document.getElementById('popup').style.display = 'none';
+        let form = document.forms['contact-form'];
+        form.onsubmit = function(event){
+
+            clearError();
+
+            if(form.email.value === ""){
+                showError("email-error", "You have to enter your email");
+                return false;
+            }
+
+            if(form.message.value === ""){
+                showError("message-error", "Please enter your message");
+                return false;
+            }
+
+            document.querySelector(".success").classList.add("display-success");
+            document.querySelector(".success").innerHTML = "Submission received. Thanks for your message!"
+            event.preventDefault();
         }
+
     </script>
  </div>
 </body>
