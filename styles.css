@@ -104,7 +104,6 @@ h1{
 }
 
 .featuredRecipes {
-    /*readjust image and div size to fit different viewport sizes*/
     width: 30%;
     height: 4em;
     font-size: 1.2em;
@@ -121,4 +120,23 @@ h1{
 }
 .featuredRecipes p {
     padding: 5px;
+}
+
+.team {
+    width: 25%;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: white;
+    padding: 3px;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 3px;
+    border-color: white;
+    border-style: solid;
+    color: black;
+}
+.team img {
+    width: 25%;
 }
