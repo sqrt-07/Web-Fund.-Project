@@ -113,14 +113,14 @@ h1{
 
 .section p {
     display: block;
-    padding: 5px;
+    padding-left: 10px;
 }
 
 .featuredRecipes {
     /*readjust image and div size to fit different viewport sizes
     UPDATE: uhh couldnt figure it out*/
     width: 30%;
-    height: 4em;
+    height: 4.5em;
     font-size: 1.2em;
     display: inline-flex;
     align-items: center;
@@ -135,7 +135,7 @@ h1{
 }
 
 .team {
-    width: 50%; /*double check to confirm*/
+    width: 50%;
     height: 5em;
     font-size: 1.2em;
     display: inline-flex;
