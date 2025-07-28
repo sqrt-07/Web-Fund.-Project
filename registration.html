@@ -3,119 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>registration</title>
+  <title>Registration</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      background-color: #E5E3D9;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .form-section {
-      max-width: 400px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
-
-    .form-section h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .form-section input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .form-section button {
-      width: 100%;
-      padding: 10px;
-      background-color: #565C56;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .form-section button:hover {
-      background-color: #3e423e;
-    }
-
-    .form-section .error {
-      color: red;
-      font-size: 14px;
-    }
-
-    .form-section .success {
-      color: green;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .nav {
-      display: flex;
-      flex-direction: row-reverse;
-      background-color: #565C56;
-      padding: 20px;
-      width: 100%;
-      margin:0;
-    }
-
-    .nav a button {
-      margin-right: 10px;
-      padding: 10px;
-      color: white;
-      background-color: #565C56;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    #logout-btn {
-      background-color: #aa4444;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
 
   <div class="nav">
     <p><a href="contact_us.html">Contact Us</a></p>
-    <p>Recipes</p>
+    <p><a href="recipes.html">Recipes</a></p>
     <p><a href="home.html">Home</a></p>
   </div>
 
-  <div class="form-section" id="register-box">
+  <div class="form-section">
     <h2>Register</h2>
     <input type="text" id="reg-name" placeholder="Full Name" />
     <input type="email" id="reg-email" placeholder="Email" />
     <input type="password" id="reg-pass" placeholder="Password" />
     <input type="password" id="reg-confirm" placeholder="Confirm Password" />
     <p class="error" id="reg-error"></p>
+    <p class="success" id="reg-success"></p>
     <button onclick="register()">Sign Up</button>
-  </div>
-
-  <div class="form-section" id="login-box">
-    <h2>Sign In</h2>
-    <input type="email" id="login-email" placeholder="Email" />
-    <input type="password" id="login-pass" placeholder="Password" />
-    <p class="error" id="login-error"></p>
-    <p class="success" id="login-success"></p>
-    <button onclick="login()">Login</button>
-    <button onclick="logout()" id="logout-btn" style="display: none;">Sign Out</button>
   </div>
 
   <script>
@@ -125,8 +32,10 @@
       const pass = document.getElementById("reg-pass").value;
       const confirm = document.getElementById("reg-confirm").value;
       const error = document.getElementById("reg-error");
+      const success = document.getElementById("reg-success");
 
       error.textContent = "";
+      success.textContent = "";
 
       if (!name || !email || !pass || !confirm) {
         error.textContent = "Please fill out all fields.";
@@ -140,44 +49,12 @@
 
       localStorage.setItem("registeredEmail", email);
       localStorage.setItem("registeredPass", pass);
-      alert("Registration successful! Now you can log in.");
+
+      success.textContent = "Registration successful! Redirecting to login...";
+      setTimeout(() => {
+        window.location.href = "signin.html";
+      }, 2000);
     }
-
-    function login() {
-      const email = document.getElementById("login-email").value.trim();
-      const pass = document.getElementById("login-pass").value;
-      const error = document.getElementById("login-error");
-      const success = document.getElementById("login-success");
-      const logoutBtn = document.getElementById("logout-btn");
-
-      error.textContent = "";
-      success.textContent = "";
-
-      const regEmail = localStorage.getItem("registeredEmail");
-      const regPass = localStorage.getItem("registeredPass");
-
-      if (email === regEmail && pass === regPass) {
-        success.textContent = `Welcome, ${email}! You have successfully logged in.`;
-        localStorage.setItem("loggedIn", "true");
-        logoutBtn.style.display = "block";
-      } else {
-        error.textContent = "Invalid email or password.";
-      }
-    }
-
-    function logout() {
-      localStorage.removeItem("loggedIn");
-      document.getElementById("login-success").textContent = "";
-      document.getElementById("logout-btn").style.display = "none";
-      alert("You have been signed out.");
-    }
-
-    window.onload = function () {
-      if (localStorage.getItem("loggedIn") === "true") {
-        document.getElementById("logout-btn").style.display = "block";
-        document.getElementById("login-success").textContent = "You are already logged in.";
-      }
-    };
   </script>
 </body>
 </html>
