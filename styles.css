@@ -7,12 +7,6 @@ body{
     overflow: auto;
 }
 
-/*styles for homepage*/
-
-div {   /*REMOVE later, this is so i can see the div box arrangements and size*/
-    /*border: 2px black solid;*/
-}
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -34,15 +28,6 @@ a {
     color: white;
 }
 
-input[type=search] {
-    padding: 5px;
-    margin: 3px;
-    font-size: 1em;
-    border-radius: 3px;
-    border-color: #565C56;
-    border-style: solid;
-}
-
 .nav p {
     margin-right: 10px;
     padding: 10px;
@@ -57,6 +42,17 @@ input[type=search] {
     padding: 20px;
     margin:0;
     width: 100%;
+}
+
+/*styles for homepage*/
+
+input[type=search] {
+    padding: 5px;
+    margin: 3px;
+    font-size: 1em;
+    border-radius: 3px;
+    border-color: #565C56;
+    border-style: solid;
 }
 
 .base {
