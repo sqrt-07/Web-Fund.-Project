@@ -4,6 +4,7 @@ body{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     overflow: auto;
+    /*i've removed the display: inline-block, so the nav bar should fit the entire screen width*/
 }
 
 * {
