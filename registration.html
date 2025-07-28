@@ -8,13 +8,17 @@
 </head>
 <body>
 
-  <div class="nav">
-    <p><a href="contact_us.html">Contact Us</a></p>
-    <p><a href="recipes.html">Recipes</a></p>
-    <p><a href="home.html">Home</a></p>
-  </div>
+  <!-- Navigation Bar -->
+ <div class="nav">
+  <p><a href="home.html">Home</a></p>
+  <p><a href="recipes.html">Recipes</a></p>
+  <p><a href="contact_us.html">Contact Us</a></p>
+  <button class="sign-in"><a href="sign_in.html">Sign In</a></button>
+  <button class="register"><a href="registration.html">Register</a></button>
+</div>
 
-  <div class="form-section">
+  <!-- Registration Form -->
+  <div class="form-box">
     <h2>Register</h2>
     <input type="text" id="reg-name" placeholder="Full Name" />
     <input type="email" id="reg-email" placeholder="Email" />
@@ -22,7 +26,7 @@
     <input type="password" id="reg-confirm" placeholder="Confirm Password" />
     <p class="error" id="reg-error"></p>
     <p class="success" id="reg-success"></p>
-    <button onclick="register()">Sign Up</button>
+    <button type="submit" onclick="register()">Sign Up</button>
   </div>
 
   <script>
@@ -47,12 +51,19 @@
         return;
       }
 
-      localStorage.setItem("registeredEmail", email);
-      localStorage.setItem("registeredPass", pass);
+      // Store user data
+      const userData = {
+        name: name,
+        email: email,
+        password: pass
+      };
+
+      localStorage.setItem(email, JSON.stringify(userData));
+      localStorage.setItem("isLoggedIn", "false");
 
       success.textContent = "Registration successful! Redirecting to login...";
       setTimeout(() => {
-        window.location.href = "signin.html";
+        window.location.href = "sign_in.html";
       }, 2000);
     }
   </script>
