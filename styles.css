@@ -83,7 +83,6 @@ h1 {
     background-image: url("images/food-spread2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    min-width: 100%;
     min-height: max-content;
     align-items: center;
     align-content: center;
@@ -92,7 +91,6 @@ h1 {
 .descriptionText {
     width: 50%;
     min-height: 100px;
-    /*when the viewport width is narrow enough the text box will exit the bounds of the descriptionBox (image background) */
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -124,8 +122,6 @@ h1 {
 }
 
 .featuredRecipes {
-    /*readjust image and div size to fit different viewport sizes
-    UPDATE: uhh couldnt figure it out*/
     width: 30%;
     height: 4.5em;
     font-size: 1.2em;
