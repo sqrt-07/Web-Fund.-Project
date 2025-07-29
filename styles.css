@@ -188,16 +188,6 @@ h1 {
     margin: 60px;
 }
 
-/*hey wait so are we changing both the featured recipe section and the team section in the homepage into vertical layout? or is this for recipe.html? because i used .section to arrange both featured recipe and the team section on homepage. theres two .section now so this one overrides the one on line 108     - janice */
-.section {      
-    display: flex;
-    justify-content: space-evenly;
-    min-height: 20%;
-    /*Changed from original style.css to flex-direction: column and align-items: center to display recipes vertically instead of horizontally */
-    flex-direction: column;
-    align-items: center;
-}
-
 /* Dropdown functionality for cuisine selection */
 .dropdown {
     position: relative;
