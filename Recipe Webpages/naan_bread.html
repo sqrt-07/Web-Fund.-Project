@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Naan Bread - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/naan.jpg" alt="Naan Bread" />
+            <h1>Naan Bread</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Soft, pillowy Indian flatbread traditionally cooked in a tandoor oven — this easy homemade naan is
+                perfect for scooping up your favorite curries and chutneys.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Rising Time:</strong> 1 hour</li>
+                <li><strong>Cook Time:</strong> 15 minutes</li>
+                <li><strong>Total Time:</strong> 1 hour 25 minutes</li>
+                <li><strong>Yield:</strong> 6-8 naan breads</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Indian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>3 ½ cups all-purpose flour</li>
+                <li>1 teaspoon salt</li>
+                <li>1 teaspoon sugar</li>
+                <li>1 teaspoon active dry yeast</li>
+                <li>1 ¼ cups warm water</li>
+                <li>⅓ cup plain yogurt</li>
+                <li>2 tablespoons vegetable oil</li>
+                <li>Butter for brushing</li>
+                <li>Optional: minced garlic or herbs for topping</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a bowl, dissolve yeast and sugar in warm water. Let it sit until frothy, about 10 minutes.</li>
+                <li>In a large bowl, combine flour and salt. Stir in yeast mixture, yogurt, and oil. Knead into a
+                    smooth, elastic dough.</li>
+                <li>Cover and let rise in a warm place for about 1 hour or until doubled in size.</li>
+                <li>Divide dough into 6-8 equal pieces and roll into balls.</li>
+                <li>Roll each ball into an oval shape about ¼ inch thick.</li>
+                <li>Cook on a hot cast iron skillet or griddle for 2 minutes per side, until puffed and golden spots
+                    appear.</li>
+                <li>Brush hot naan with melted butter and serve warm.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

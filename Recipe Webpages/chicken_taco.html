@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Best Grilled Chicken Street Tacos - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav"> <!-- Navigation (same as above) -->
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+        <div class="recipe-hero">
+            <img src="../images/grilled-chicken-street-tacos.jpg" alt="Best Grilled Chicken Street Tacos" />
+            <h1>Best Grilled Chicken Street Tacos</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Tender, juicy grilled chicken bites packed in corn tortillas and topped with fresh onion, cilantro, and
+                a squeeze of lime — the essence of Mexican street food!
+            </p>
+        </div>
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes + marinating</li>
+                <li><strong>Cook Time:</strong> 15 minutes</li>
+                <li><strong>Total Time:</strong> 30 minutes + marinating</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Mexican</li>
+            </ol>
+        </div>
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 1/2 pounds boneless, skinless chicken thighs, cut into bite-sized pieces</li>
+                <li>2 tablespoons olive oil</li>
+                <li>Juice of 1 lime</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 teaspoon chili powder</li>
+                <li>1 teaspoon cumin</li>
+                <li>1/2 teaspoon paprika</li>
+                <li>1/2 teaspoon kosher salt</li>
+                <li>Corn tortillas</li>
+                <li>Finely chopped white onion and cilantro, for topping</li>
+                <li>Lime wedges</li>
+            </ul>
+        </div>
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a bowl, combine olive oil, lime juice, garlic, chili powder, cumin, paprika, and salt. Mix in
+                    chicken pieces and marinate at least 30 minutes.</li>
+                <li>Preheat grill or grill pan to medium-high. Grill chicken 4-5 minutes per side, until cooked through.
+                    Let rest, then chop into small pieces.</li>
+                <li>Warm tortillas, fill with grilled chicken, top with onion and cilantro. Serve with lime wedges.</li>
+            </ol>
+        </div>
+    </div>
+    <script>function filterByCuisine(cuisine) { window.location.href = `../recipe.html#${cuisine}`; }</script>
+</body>
+
+</html>

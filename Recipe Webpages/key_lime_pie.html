@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Easy Key Lime Pie - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/easy-key-lime-pie.jpg" alt="Easy Key Lime Pie" />
+            <h1>Easy Key Lime Pie</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A refreshingly tangy no-bake Key lime pie with a creamy filling of cream cheese and sweetened condensed milk in a crunchy graham cracker crust.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Chill Time:</strong> At least 4 hours</li>
+                <li><strong>Total Time:</strong> 4+ hours</li>
+                <li><strong>Servings:</strong> 8 servings</li>
+                <li><strong>Difficulty:</strong> Very Easy</li>
+                <li><strong>Cuisine:</strong> American</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 package (8 ounces) cream cheese, softened</li>
+                <li>1 can (14 ounces) sweetened condensed milk</li>
+                <li>½ cup Key lime juice or regular lime juice</li>
+                <li>1 graham cracker crust (9 inches)</li>
+                <li>2 cups whipped topping</li>
+                <li>Optional: lime slices for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a large bowl, beat cream cheese until smooth.</li>
+                <li>Beat in sweetened condensed milk and lime juice until blended.</li>
+                <li>Pour filling into the graham cracker crust and cover.</li>
+                <li>Refrigerate for at least 4 hours or overnight until set.</li>
+                <li>Just before serving, garnish with whipped topping and lime slices if desired.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

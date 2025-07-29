@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sartu di Riso - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/sartu-di-riso.jpg" alt="Sartu di Riso" />
+            <h1>Sartu di Riso</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A classic Neapolitan rice timbale baked with a savory filling of meatballs, peas, cheese, and tomato
+                sauce — a festive and elegant Italian main dish.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 1 hour 30 minutes</li>
+                <li><strong>Cook Time:</strong> 1 hour</li>
+                <li><strong>Total Time:</strong> 2 hours 30 minutes</li>
+                <li><strong>Servings:</strong> 6-8</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Italian, Neapolitan</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>2 cups Arborio rice</li>
+                <li>4 cups chicken broth</li>
+                <li>1/4 cup butter</li>
+                <li>1 onion, finely chopped</li>
+                <li>1 cup cooked peas</li>
+                <li>12-15 small meatballs (cooked)</li>
+                <li>1 cup mozzarella cheese, cubed</li>
+                <li>1 cup grated Parmesan cheese</li>
+                <li>2 eggs</li>
+                <li>1 cup tomato sauce</li>
+                <li>Salt and pepper, to taste</li>
+                <li>Fresh parsley, chopped (optional)</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Cook Arborio rice in chicken broth until creamy and tender. Stir in butter and set aside to cool.
+                </li>
+                <li>In a mixing bowl, combine cooked rice with eggs, half of the Parmesan, salt, and pepper.</li>
+                <li>Grease a ring mold or deep baking pan. Press half the rice mixture into the bottom and sides to form
+                    a shell.</li>
+                <li>Layer cooked meatballs, peas, mozzarella, and some tomato sauce inside the rice shell.</li>
+                <li>Top with remaining rice mixture, pressing to seal.</li>
+                <li>Pour tomato sauce over the top and sprinkle remaining Parmesan cheese.</li>
+                <li>Bake at 350°F (175°C) for about 1 hour until set and golden.</li>
+                <li>Let cool slightly, then unmold carefully. Garnish with chopped parsley and serve warm.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

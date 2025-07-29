@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pork Soup Dumplings - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/pork-soup-dumplings.jpg" alt="Pork Soup Dumplings" />
+            <h1>Pork Soup Dumplings</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Delicate, steamed pork dumplings filled with a savory broth that bursts in your mouth — a Chinese dim
+                sum favorite lovingly crafted at home.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 1 hour 15 minutes (including dough and filling prep)</li>
+                <li><strong>Cook Time:</strong> 15 minutes steaming</li>
+                <li><strong>Total Time:</strong> About 1 hour 30 minutes</li>
+                <li><strong>Servings:</strong> 24 dumplings</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Chinese, Dim Sum</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li><strong>For the dough:</strong></li>
+                <li>2 cups all-purpose flour</li>
+                <li>¾ cup boiling water</li>
+
+                <li><strong>For the filling:</strong></li>
+                <li>12 oz ground pork</li>
+                <li>1 tablespoon soy sauce</li>
+                <li>1 tablespoon Shaoxing wine (or dry sherry)</li>
+                <li>1 teaspoon sesame oil</li>
+                <li>3 green onions, finely chopped</li>
+                <li>1 tablespoon ginger, grated</li>
+                <li>1 teaspoon sugar</li>
+                <li>1 cup hot chicken broth (for soup gelatin)</li>
+                <li>1 tablespoon unflavored gelatin powder</li>
+                <li>Salt and pepper, to taste</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Mix gelatin powder with hot chicken broth and stir until dissolved. Refrigerate until set into a
+                    firm jelly.</li>
+                <li>Prepare dough by mixing flour and boiling water, knead into a smooth ball. Cover and let rest 30
+                    minutes.</li>
+                <li>Dice the gelatin jelly into small cubes.</li>
+                <li>In a bowl, combine ground pork, soy sauce, Shaoxing wine, sesame oil, green onions, ginger, sugar,
+                    salt, and pepper. Gently fold in the gelatin cubes.</li>
+                <li>Roll dough into a long log, cut into 24 pieces. Roll each piece into a thin circle wrapper.</li>
+                <li>Place about 1 tablespoon filling in the center of each wrapper. Pleat edges to seal the dumpling
+                    tightly.</li>
+                <li>Steam dumplings over boiling water for about 15 minutes until cooked through.</li>
+                <li>Serve hot with dipping sauce.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

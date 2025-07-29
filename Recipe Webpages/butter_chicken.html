@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Butter Chicken - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/butter-chicken.jpg" alt="Butter Chicken" />
+            <h1>Butter Chicken</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Creamy, tomato-based chicken curry simmered with aromatic spices and finished with butter and cream — a
+                quintessential Indian comfort dish loved worldwide.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 20 minutes</li>
+                <li><strong>Marinate Time:</strong> 1 hour to overnight</li>
+                <li><strong>Cook Time:</strong> 30 minutes</li>
+                <li><strong>Total Time:</strong> Approx. 2 hours</li>
+                <li><strong>Servings:</strong> 4-6</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Indian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>500 g boneless chicken thighs, cut into chunks</li>
+                <li>1 cup plain yogurt</li>
+                <li>2 tablespoons lemon juice</li>
+                <li>2 teaspoons garam masala</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>1 teaspoon chili powder</li>
+                <li>4 tablespoons butter</li>
+                <li>1 large onion, finely chopped</li>
+                <li>4 cloves garlic, minced</li>
+                <li>1 tablespoon ginger, grated</li>
+                <li>1 cup tomato puree</li>
+                <li>½ cup heavy cream</li>
+                <li>2 tablespoons fresh cilantro, chopped (for garnish)</li>
+                <li>Salt to taste</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a bowl, combine chicken pieces, yogurt, lemon juice, garam masala, turmeric, and chili powder.
+                    Marinate for at least 1 hour or overnight.</li>
+                <li>In a large pan, melt butter over medium heat. Add onions, garlic, and ginger; sauté until golden.
+                </li>
+                <li>Add marinated chicken (discard excess marinade) and cook until chicken is no longer pink.</li>
+                <li>Stir in tomato puree, cover, and simmer for 15 minutes until chicken is cooked through.</li>
+                <li>Reduce heat, stir in cream, and simmer uncovered for another 5-10 minutes until sauce thickens.</li>
+                <li>Garnish with fresh cilantro and serve hot with naan or rice.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+
+</body>
+
+</html>

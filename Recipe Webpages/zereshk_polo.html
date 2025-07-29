@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zereshk Polo ba Morgh - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            /* Changed to vertical layout */
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/zereshk-polo-ba-morgh.jpg"
+                alt="Zereshk Polo ba Morgh - Barberry Rice and Saffron Chicken" />
+            <h1>Zereshk Polo ba Morgh</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A cherished Persian classic featuring delicate saffron-infused basmati rice layered with tart, sweet
+                barberries, accompanied by tender, juicy chicken marinated and cooked in an aromatic saffron tomato
+                sauce.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 1 hour 15 minutes</li>
+                <li><strong>Total Time:</strong> 1 hour 30 minutes</li>
+                <li><strong>Servings:</strong> 4 people</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Persian, Iranian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>4 chicken breasts (with skin and drumette attached)</li>
+                <li>1 medium onion, finely sliced</li>
+                <li>1 tbsp tomato purée</li>
+                <li>1 tbsp Greek yoghurt</li>
+                <li>2 tbsp olive oil (for marinade)</li>
+                <li>1/2 tsp turmeric</li>
+                <li>1/8 tsp ground saffron (bloomed in 2 tbsp water)</li>
+                <li>Juice of 1/2 lemon</li>
+                <li>Salt and pepper, to taste</li>
+                <li>25 g butter (for cooking chicken)</li>
+                <li>2 tbsp olive oil (for cooking chicken)</li>
+
+                <li>2 cups white long-grain basmati rice (about 400g)</li>
+                <li>2 tbsp salt (for soaking rice)</li>
+                <li>2 tbsp vegetable oil</li>
+                <li>2 tbsp ghee or butter</li>
+                <li>1/8 tsp ground saffron (bloomed in 2 tbsp water for tahdig - crispy rice bottom)</li>
+                <li>1/4 tsp ground saffron (bloomed in 2 tsp rose water and 2 tbsp water for rice garnish)</li>
+
+                <li>5 tbsp barberries (washed)</li>
+                <li>2 tbsp caster sugar (adjust sweetener to taste)</li>
+                <li>1/8 tsp ground saffron (bloomed in 2 tbsp water for barberries)</li>
+                <li>2 tbsp caster sugar (for barberries sauté)</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Marinate the chicken by combining sliced onion, tomato purée, Greek yoghurt, olive oil, turmeric,
+                    bloomed saffron, lemon juice, salt, and pepper in a bowl. Coat the chicken breasts in the marinade
+                    and refrigerate for at least 8 hours or overnight.</li>
+                <li>To prepare the rice, rinse the basmati rice in cold water until water runs clear. Soak in salted
+                    water for at least 30 minutes (preferably overnight).</li>
+                <li>Cook the rice by parboiling in salted boiling water until the grains are soft on the outside but
+                    still firm inside (al dente, about 3-7 minutes). Drain and rinse with cold water to stop cooking.
+                </li>
+                <li>In a saucepan, heat vegetable oil and bloomed saffron to create saffron oil. Spread a layer of rice
+                    mixed with saffron oil at the bottom to form tahdig (crispy crust). Layer the rest of the rice in a
+                    pyramid shape, reserving some saffron rice for garnish.</li>
+                <li>Finish the rice by steaming on low heat with a lid wrapped in a towel for about 45 minutes to
+                    develop crispy tahdig.</li>
+                <li>Separately, sauté washed barberries gently in butter with caster sugar and bloomed saffron on low
+                    heat for 30 seconds, then remove from heat.</li>
+                <li>Cook the marinated chicken by first pan-frying it with olive oil and butter until golden and crispy
+                    on the skin side, then finish in the oven at 180°C (350°F) for 15-20 minutes until fully cooked and
+                    juicy.</li>
+                <li>Before serving, fluff the rice and sprinkle the saffron-colored rice garnish and sautéed barberries
+                    over the top.</li>
+                <li>Serve the saffron and barberry rice alongside the golden chicken breasts. Optionally accompany with
+                    fresh herbs, Salad Shirazi, Maast O’Khiar (yogurt and cucumber dip), or Persian pickles.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Dropdown menu navigation filter
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

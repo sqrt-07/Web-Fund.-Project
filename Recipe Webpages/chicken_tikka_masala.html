@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chicken Tikka Masala - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/chicken-tikka-masala.jpg" alt="Chicken Tikka Masala" />
+            <h1>Chicken Tikka Masala</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Tender chicken chunks marinated in spiced yogurt, grilled and simmered in a creamy, tomato-infused
+                masala sauce — a globally beloved Indian dish with rich, aromatic flavors.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 30 minutes</li>
+                <li><strong>Marinate Time:</strong> 1 hour to overnight</li>
+                <li><strong>Cook Time:</strong> 25 minutes</li>
+                <li><strong>Total Time:</strong> Approx. 2 hours</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Indian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>2 pounds boneless, skinless chicken thighs, cut into chunks</li>
+                <li>1 cup plain yogurt</li>
+                <li>1 tablespoon lemon juice</li>
+                <li>2 teaspoons ground cumin</li>
+                <li>2 teaspoons ground coriander</li>
+                <li>1 teaspoon garam masala</li>
+                <li>1 teaspoon turmeric</li>
+                <li>1 teaspoon cayenne pepper</li>
+                <li>Salt, to taste</li>
+                <li>3 tablespoons vegetable oil</li>
+                <li>1 large onion, finely chopped</li>
+                <li>4 cloves garlic, minced</li>
+                <li>1 tablespoon ginger, minced</li>
+                <li>1 can (14 oz) tomato puree</li>
+                <li>1 cup heavy cream</li>
+                <li>Fresh cilantro leaves, for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a large bowl, combine yogurt, lemon juice, cumin, coriander, garam masala, turmeric, cayenne, and
+                    salt.</li>
+                <li>Add chicken chunks, coat well, cover, and marinate for 1 hour or overnight in the refrigerator.</li>
+                <li>Preheat grill or oven to 450°F (230°C). Thread chicken onto skewers and grill or bake for 10-12
+                    minutes, turning halfway, until cooked through.</li>
+                <li>In a large skillet, heat oil over medium heat. Add onion, garlic, and ginger, sauté until golden and
+                    fragrant.</li>
+                <li>Add tomato puree, cook for 10 minutes stirring occasionally.</li>
+                <li>Stir in cream and cooked chicken pieces. Simmer 5 minutes until sauce thickens and chicken is well
+                    coated.</li>
+                <li>Garnish with fresh cilantro and serve hot with rice or naan.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

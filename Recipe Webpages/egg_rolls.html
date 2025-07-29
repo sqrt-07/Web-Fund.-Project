@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Takeout Style Air Fryer Egg Rolls - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/air-fryer-egg-rolls.jpg" alt="Takeout Style Air Fryer Egg Rolls" />
+            <h1>Takeout Style Air Fryer Egg Rolls</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Crispy, golden-brown egg rolls made easy in the air fryer, filled with seasoned pork and crunchy
+                vegetables for a healthier take on a popular takeout favorite.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 10 minutes</li>
+                <li><strong>Total Time:</strong> 25 minutes</li>
+                <li><strong>Servings:</strong> 6 servings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> American, Chinese-inspired</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 lb ground pork</li>
+                <li>1 cup shredded cabbage</li>
+                <li>2 green onions, thinly sliced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 teaspoon grated fresh ginger</li>
+                <li>2 tablespoons soy sauce</li>
+                <li>Salt and pepper, to taste</li>
+                <li>12 egg roll wrappers</li>
+                <li>Cooking spray</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a large skillet over medium heat, cook ground pork until no longer pink; drain excess fat.</li>
+                <li>Add cabbage, green onions, garlic, ginger, soy sauce, salt, and pepper; cook until cabbage is
+                    tender, about 3-4 minutes. Remove from heat and let cool slightly.</li>
+                <li>Place about 2 tablespoons of pork mixture in the center of each egg roll wrapper. Fold in sides and
+                    roll tightly, sealing edges with water.</li>
+                <li>Preheat the air fryer to 400°F (200°C). Spray egg rolls lightly with cooking spray.</li>
+                <li>Arrange egg rolls in a single layer in the air fryer basket. Cook for 8-10 minutes turning halfway
+                    through, until golden and crispy.</li>
+                <li>Serve hot with your favorite dipping sauce.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

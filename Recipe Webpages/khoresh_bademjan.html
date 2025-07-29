@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khoresh Bademjan - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/khoreshBademjan.jpg" alt="Khoresh Bademjan - Persian Eggplant Stew" />
+            <h1>Khoresh Bademjan (Persian Eggplant Stew with Beef)</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A classic Persian stew combining tender chunks of beef with baked eggplants simmered in a rich, tangy
+                tomato sauce, accented with dried lime and saffron — a beloved comfort food served over steamed rice.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 20 minutes</li>
+                <li><strong>Cook Time:</strong> 1 hour 30 minutes</li>
+                <li><strong>Total Time:</strong> 1 hour 50 minutes</li>
+                <li><strong>Servings:</strong> 4-6 people</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Persian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>2 tablespoons olive oil</li>
+                <li>500 g lamb or beef, cut into bite-sized pieces (leg or shoulder preferred)</li>
+                <li>1 large onion, chopped</li>
+                <li>1 small clove garlic, finely chopped</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>2 tablespoons concentrated tomato paste</li>
+                <li>200 g canned chopped tomatoes</li>
+                <li>250 ml water</li>
+                <li>1 tablespoon liquid saffron (saffron soaked in hot water)</li>
+                <li>½ teaspoon salt</li>
+                <li>1 dried lime (limoo amani) or substitute: juice of 1 lime or 1 teaspoon sumac</li>
+                <li>Freshly ground black pepper, to taste</li>
+                <li>7-10 medium Indian or Italian eggplants, peeled and baked or grilled</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a medium stockpot, combine the cubed meat, water, turmeric, chopped onion, and black pepper.
+                    Bring to a boil, then reduce heat and simmer covered for 1 to 1½ hours until the meat is tender.
+                    Discard the onion after cooking.</li>
+                <li>While the meat cooks, bake or grill the peeled and sliced eggplants until soft and slightly
+                    caramelized.</li>
+                <li>In a large skillet, heat olive oil and fry the thinly sliced onions until golden brown.</li>
+                <li>Add the tomato paste to the fried onions and sauté over medium-low heat for 5 minutes until
+                    aromatic.</li>
+                <li>Add the broth from the cooked meat and salt to the tomato-onion mixture, bring to a boil to make the
+                    sauce.</li>
+                <li>Add the cooked meat, baked eggplants, dried lime (or substitute), and saffron liquid to the skillet.
+                    Bring to a boil again, then reduce heat to medium-low, cover, and simmer for 45 minutes to 1 hour
+                    until the sauce thickens and the flavors meld.</li>
+                <li>Adjust salt and pepper to taste before serving.</li>
+                <li>Serve hot over steamed Persian white rice with tahdig if desired.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kuku - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            /* Display vertically */
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/kookoo.jpg" alt="Kuku - Persian Herb Frittata" />
+            <h1>Kuku</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A Persian-style summer frittata made with cooked kale, red onions, potatoes, and red pepper folded into
+                eggs with aromatic spices and served with a fresh pea, mint, and feta dip — a light and delicious meal
+                celebrating vibrant flavors and herbs.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 20 minutes</li>
+                <li><strong>Cook Time:</strong> 1 hour</li>
+                <li><strong>Total Time:</strong> 1 hour 20 minutes</li>
+                <li><strong>Servings:</strong> 2-4 people</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Persian, Iranian, Fusion</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>2 tbsp olive oil (plus extra to grease the tin)</li>
+                <li>200 g potatoes, diced into 1 cm cubes</li>
+                <li>1 medium/large red onion, finely diced</li>
+                <li>1 red pepper, medium diced</li>
+                <li>75 g kale (stems removed, washed, roughly chopped)</li>
+                <li>2 cloves garlic, crushed</li>
+                <li>1 tbsp tomato purée (dissolved in 100 ml water)</li>
+                <li>1 tsp smoked paprika</li>
+                <li>1 small red chili, minced</li>
+                <li>6 large free range eggs, cracked and beaten</li>
+                <li>Salt and pepper, to taste</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Preheat the oven to 160°C (fan) / 180°C (conventional) / Gas Mark 4. Grease and line a 20 cm
+                    diameter cake tin with baking paper and place it in the oven to heat.</li>
+                <li>Heat 2 tbsp olive oil in a frying pan over medium-high heat. Add the potatoes and cook until golden
+                    and slightly crispy.</li>
+                <li>Add the diced red pepper and onion. Cook until softened.</li>
+                <li>Add the crushed garlic, smoked paprika, and minced red chili. Stir well.</li>
+                <li>Add the tomato purée diluted in water and stir to combine.</li>
+                <li>Add the kale and cook until wilted and the mixture has very little or no liquid left. Turn off the
+                    heat and let it cool for 10 minutes.</li>
+                <li>In a large bowl, beat the eggs, then add the cooled vegetable mixture. Season with salt and pepper
+                    and mix thoroughly.</li>
+                <li>Remove the hot cake tin from the oven and pour the mixture in. Bake in the oven for 30 to 40 minutes
+                    or until a knife inserted into the center comes out clean.</li>
+                <li>Allow to cool slightly before slicing. Serve warm or cold, optionally accompanied by fresh pea,
+                    mint, and feta dip, flatbreads, or antipasti.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

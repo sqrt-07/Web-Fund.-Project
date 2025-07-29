@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Italian Tuna Salad - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/italian-tuna-salad.jpg" alt="Italian Tuna Salad" />
+            <h1>Italian Tuna Salad</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A fresh and flavorful Italian-inspired tuna salad with crisp vegetables, tender tuna chunks, and a zesty
+                dressing — perfect for a light lunch or picnic.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Italian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 (5-ounce) can good quality tuna packed in olive oil, drained</li>
+                <li>1 cup cherry tomatoes, halved</li>
+                <li>1 cup cucumber, diced</li>
+                <li>1/2 cup roasted red peppers, sliced</li>
+                <li>1/4 cup Kalamata olives, pitted and halved</li>
+                <li>1/4 cup red onion, thinly sliced</li>
+                <li>1/4 cup fresh basil leaves, torn</li>
+                <li>2 tablespoons extra-virgin olive oil</li>
+                <li>1 tablespoon red wine vinegar</li>
+                <li>Salt and freshly ground black pepper, to taste</li>
+                <li>Optional: Crusty bread, for serving</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a large bowl, gently flake the tuna with a fork.</li>
+                <li>Add cherry tomatoes, cucumber, roasted red peppers, olives, red onion, and basil to the bowl.</li>
+                <li>Drizzle the olive oil and red wine vinegar over the salad.</li>
+                <li>Season with salt and freshly ground black pepper to taste.</li>
+                <li>Toss gently to combine without breaking up the tuna too much.</li>
+                <li>Serve immediately with crusty bread if desired.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

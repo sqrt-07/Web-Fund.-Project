@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sticky Honey Chicken Wings - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/sticky-honey-chicken-wings.jpg" alt="Sticky Honey Chicken Wings" />
+            <h1>Sticky Honey Chicken Wings</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Sweet and sticky honey-glazed chicken wings with a tangy punch from white vinegar and a smoky depth from
+                paprika.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 25 minutes (plus 4 hours marinating)</li>
+                <li><strong>Cook Time:</strong> 30 minutes</li>
+                <li><strong>Total Time:</strong> Approximately 5 hours</li>
+                <li><strong>Yield:</strong> About 3 dozen wings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> American</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>½ cup orange blossom honey</li>
+                <li>⅓ cup white vinegar</li>
+                <li>2 tablespoons paprika</li>
+                <li>2 teaspoons salt</li>
+                <li>1 teaspoon pepper</li>
+                <li>4 pounds chicken wings</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a small bowl, combine honey, white vinegar, paprika, salt, and pepper.</li>
+                <li>Cut through the two wing joints with a sharp knife, discarding wing tips. Add remaining wing pieces
+                    and honey mixture to a large bowl; stir to coat. Cover and refrigerate 4 hours or overnight.</li>
+                <li>Preheat oven to 375°F (190°C). Remove wings; reserve honey mixture.</li>
+                <li>Place wings on greased 15x10x1-inch baking pans. Bake until juices run clear, about 30 minutes,
+                    turning halfway through.</li>
+                <li>Meanwhile, place reserved honey mixture in a small saucepan. Bring to a boil; cook 1 minute.</li>
+                <li>Remove wings from oven; preheat broiler. Place wings on a greased rack in a broiler pan; brush with
+                    honey mixture.</li>
+                <li>Broil 4-5 inches from heat until crispy, 3-5 minutes.</li>
+                <li>Serve with remaining honey mixture.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

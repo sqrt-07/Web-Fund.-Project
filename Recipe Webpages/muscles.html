@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mussels with Fennel and Italian Beer - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/mussels-with-fennel-italian-beer.jpg" alt="Mussels with Fennel and Italian Beer" />
+            <h1>Mussels with Fennel and Italian Beer</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Fresh mussels steamed to perfection with aromatic fennel, garlic, and bright Italian beer — a light yet
+                flavorful seafood dish ideal for any occasion.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 10 minutes</li>
+                <li><strong>Total Time:</strong> 25 minutes</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Italian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>3 tablespoons olive oil</li>
+                <li>1 fennel bulb, thinly sliced</li>
+                <li>4 cloves garlic, thinly sliced</li>
+                <li>2 pounds fresh mussels, cleaned and debearded</li>
+                <li>1 bottle (12 oz) Italian lager or pale ale beer</li>
+                <li>1/2 teaspoon red pepper flakes</li>
+                <li>1/4 cup fresh parsley, chopped, plus more for garnish</li>
+                <li>Salt and freshly ground black pepper, to taste</li>
+                <li>Lemon wedges, for serving</li>
+                <li>Crusty bread, for soaking up broth</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Heat olive oil in a large pot over medium heat.</li>
+                <li>Add sliced fennel and garlic; sauté until softened and fragrant, about 5 minutes.</li>
+                <li>Add red pepper flakes and stir for 30 seconds.</li>
+                <li>Add mussels and pour in the beer. Cover the pot and cook until mussels open, about 5-7 minutes.</li>
+                <li>Discard any mussels that remain closed.</li>
+                <li>Stir in chopped parsley, season with salt and pepper.</li>
+                <li>Serve immediately with lemon wedges and crusty bread to soak up the flavorful broth.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

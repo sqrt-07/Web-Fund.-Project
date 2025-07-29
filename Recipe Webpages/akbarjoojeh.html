@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbarjoojeh - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            /*Changed from original style.css to flex-direction: column and align-items: center to display recipes vertically instead of horizontally */
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <!-- Added dropdown functionality for food selection-->
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/akbarjoojeh.jpg" alt="Akbarjoojeh">
+            <h1>Akbarjoojeh</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">A whole young chicken, marinated to tender
+                perfection and pan-fried
+                in rich butter until golden and crispy, served alongside fragrant saffron rice and a vibrant
+                pomegranate reduction — a celebrated northern Persian classic bursting with flavor.
+            </p>
+        </div>
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time: </strong> 15 minutes</li>
+                <li><strong>Marinating Time: </strong> 12-24 hours</li>
+                <li><strong>Cook Time: </strong> 30-40 minutes</li>
+                <li><strong>Total Time: </strong> Approx. 13-25 hours (including marinating)</li>
+                <li><strong>Servings: </strong> 4-6 people</li>
+                <li><strong>Difficulty: </strong> Medium</li>
+                <li><strong>Cuisine: </strong> Persian - Mazandaran</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 whole young chicken (under 1 kg), cut into pieces</li>
+                <li>1 large onion, chopped</li>
+                <li>2-3 cloves garlic, peeled and chopped</li>
+                <li>1/4 cup walnut, chopped</li>
+                <li>3 tablespoons butter</li>
+                <li>2 teaspoons black pepper</li>
+                <li>1 teaspoon turmeric</li>
+                <li>Juice of 1 lemon</li>
+                <li>3 tablespoons pomegranate paste (morabba anar)</li>
+                <li>Salt, to taste</li>
+                <li>Cooking oil or butter, for frying</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Skin and wash the whole chicken, then cut it into parts (you can leave wings whole or cut).</li>
+                <li>In a large bowl, combine chopped onion, garlic, lemon juice, pomegranate paste, turmeric, black
+                    pepper, and salt.</li>
+                <li>Add the chicken pieces to the marinade, mix thoroughly to coat, and refrigerate for 12 to 24 hours
+                    for best flavor.</li>
+                <li>Remove chicken from marinade 15 minutes before cooking.</li>
+                <li>Heat oil or butter in a large pot over medium heat. Add the chicken pieces (remove onion bits if
+                    present) and fry until golden on all sides.</li>
+                <li>Lower the heat, cover the pot, and cook chicken for 20-30 minutes, turning occasionally to avoid
+                    burning.</li>
+                <li>In the last 2-3 minutes of cooking, add salt and melt butter in the pan; stir-fry chicken with
+                    butter to enrich flavor.</li>
+                <li>Serve the chicken hot, traditionally alongside saffron rice and pomegranate sauce for dipping.</li>
+            </ol>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            // Redirect to main recipes page with filter
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

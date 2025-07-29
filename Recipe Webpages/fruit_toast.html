@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Italian Fruit Toast - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/italian-fruit-toast.jpg" alt="Italian Fruit Toast" />
+            <h1>Italian Fruit Toast</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A delightful and colorful Italian-inspired toast topped with fresh seasonal fruits, creamy ricotta,
+                honey, and a sprinkle of crunchy pistachios — perfect for breakfast or brunch.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Servings:</strong> 2</li>
+                <li><strong>Difficulty:</strong> Very Easy</li>
+                <li><strong>Cuisine:</strong> Italian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>4 slices rustic Italian bread</li>
+                <li>1 cup ricotta cheese</li>
+                <li>1 tablespoon honey, plus more for drizzling</li>
+                <li>1/2 teaspoon vanilla extract</li>
+                <li>1 cup mixed fresh fruit (e.g., berries, peaches, figs)</li>
+                <li>1/4 cup shelled pistachios, roughly chopped</li>
+                <li>Fresh mint leaves, for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Toast the bread slices until golden and crisp.</li>
+                <li>In a small bowl, mix ricotta cheese with honey and vanilla extract until smooth.</li>
+                <li>Spread the ricotta mixture evenly on each slice of toast.</li>
+                <li>Top with an assortment of fresh fruit.</li>
+                <li>Drizzle additional honey over the fruit and sprinkle with chopped pistachios.</li>
+                <li>Garnish with fresh mint leaves and serve immediately.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

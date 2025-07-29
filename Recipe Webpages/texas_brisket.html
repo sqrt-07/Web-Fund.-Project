@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texas-Style Beef Brisket - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            /* Display vertically */
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/texas-style-brisket.jpg" alt="Texas-Style Beef Brisket" />
+            <h1>Texas-Style Beef Brisket</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Thick slices of tender, slow-cooked beef brisket kissed with smoky, sweet, and tangy barbecue sauce — a
+                no-smoke Texas classic you can make in your slow cooker.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> Overnight marinating</li>
+                <li><strong>Cook Time:</strong> 6 to 8 hours</li>
+                <li><strong>Total Time:</strong> Approx. 7 to 9 hours</li>
+                <li><strong>Servings:</strong> 8-10 people</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Texan, American BBQ</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>3 tablespoons Worcestershire sauce</li>
+                <li>1 tablespoon chili powder</li>
+                <li>2 garlic cloves, minced</li>
+                <li>1 teaspoon celery salt</li>
+                <li>1 teaspoon ground black pepper</li>
+                <li>1 teaspoon liquid smoke (optional)</li>
+                <li>1 fresh beef brisket (6 pounds)</li>
+                <li>1/2 cup beef broth</li>
+                <li>2 bay leaves</li>
+                <li><strong>Barbecue Sauce:</strong></li>
+                <li>1 medium onion, chopped</li>
+                <li>2 tablespoons canola oil</li>
+                <li>2 garlic cloves, minced</li>
+                <li>1 cup ketchup</li>
+                <li>1/2 cup molasses</li>
+                <li>1/4 cup cider vinegar</li>
+                <li>2 teaspoons chili powder</li>
+                <li>1/2 teaspoon ground mustard</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a large bowl or shallow dish, combine Worcestershire sauce, chili powder, minced garlic, celery
+                    salt, black pepper, and liquid smoke if using.</li>
+                <li>Cut the brisket in half, add to the marinade, and turn to coat. Cover and refrigerate overnight.
+                </li>
+                <li>Transfer the brisket to a 5- or 6-quart slow cooker. Add beef broth and bay leaves. Cover and cook
+                    on low for 6 to 8 hours or until meat is tender.</li>
+                <li>For the barbecue sauce: In a small saucepan, sauté chopped onion in canola oil until tender. Add
+                    minced garlic and cook for 1 more minute.</li>
+                <li>Stir in ketchup, molasses, cider vinegar, chili powder, and ground mustard. Heat through until sauce
+                    is warm and aromatic.</li>
+                <li>Remove brisket from slow cooker and discard bay leaves. Place 1 cup of the cooking juices in a
+                    measuring cup and skim off fat. Discard remaining juices.</li>
+                <li>Add the reserved cooking juices to the barbecue sauce.</li>
+                <li>Return the brisket to the slow cooker and top with the barbecue sauce. Cover and cook on high for 30
+                    minutes to allow flavors to blend.</li>
+                <li>Thinly slice the brisket against the grain and serve warm with the sauce.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

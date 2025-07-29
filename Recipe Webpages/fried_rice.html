@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chinese Sausage Fried Rice - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/chinese-sausage-fried-rice.jpg" alt="Chinese Sausage Fried Rice" />
+            <h1>Chinese Sausage Fried Rice</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Fragrant fried rice loaded with sweet and savory Chinese sausage, fresh vegetables, and eggs — a quick
+                and satisfying one-pan meal.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Cook Time:</strong> 10 minutes</li>
+                <li><strong>Total Time:</strong> 20 minutes</li>
+                <li><strong>Servings:</strong> 4 servings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Chinese-inspired</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>8 oz Chinese sausage (lap cheong), thinly sliced</li>
+                <li>3 cups cooked jasmine rice (preferably day-old)</li>
+                <li>2 eggs, lightly beaten</li>
+                <li>1 cup frozen peas and carrots</li>
+                <li>3 green onions, chopped</li>
+                <li>2 tablespoons soy sauce</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 tablespoon vegetable oil</li>
+                <li>Salt and pepper, to taste</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Heat oil in a large skillet or wok over medium-high heat. Add Chinese sausage slices and cook until
+                    fragrant and starting to brown, about 3-4 minutes.</li>
+                <li>Add garlic and sauté for 30 seconds.</li>
+                <li>Push sausage to one side and pour beaten eggs into the other side. Scramble eggs until just set,
+                    then mix with sausage.</li>
+                <li>Add cooked rice, frozen peas and carrots, and soy sauce. Stir well to combine and heat through.</li>
+                <li>Stir in chopped green onions. Season with salt and pepper to taste.</li>
+                <li>Serve warm as a main course or side dish.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

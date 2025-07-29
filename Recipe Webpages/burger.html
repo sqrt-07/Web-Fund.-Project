@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wisconsin Butter Burgers - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/wisconsis-butter-burgers.jpg" alt="Wisconsin Butter Burgers" />
+            <h1>Wisconsin Butter Burgers</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Classic Wisconsin-style butter burgers combining juicy ground beef with freshly chopped mushrooms and a
+                butter-basted sear for irresistible richness and flavor.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 15 minutes</li>
+                <li><strong>Total Time:</strong> 30 minutes</li>
+                <li><strong>Servings:</strong> 4 servings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> American</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 pound lean ground beef (90% lean)</li>
+                <li>½ teaspoon seasoned salt</li>
+                <li>½ teaspoon pepper</li>
+                <li>½ pound fresh mushrooms</li>
+                <li>2 tablespoons plus 4 teaspoons butter, divided</li>
+                <li>4 hamburger buns, split</li>
+                <li>Optional toppings: tomato slices, lettuce leaves, dill pickle slices, ketchup, and mustard</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Sprinkle ground beef with seasoned salt and pepper. Pulse mushrooms in a food processor until finely
+                    chopped. Add mushrooms to beef and mix lightly but thoroughly. Shape into four ½-inch-thick patties.
+                </li>
+                <li>In a large skillet, heat 2 tablespoons butter over medium heat. Add burgers; cook 6 to 8 minutes on
+                    each side, basting with butter, until a thermometer reads 160°. Remove from heat; keep warm.</li>
+                <li>Add bun tops to skillet; toast until golden brown.</li>
+                <li>Transfer burgers to bun bottoms. Top each with 1 teaspoon butter. Replace bun tops.</li>
+                <li>Serve with desired toppings.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

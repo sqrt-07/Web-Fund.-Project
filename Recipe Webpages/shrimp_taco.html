@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Best Shrimp Tacos - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>.section {display: flex; justify-content: space-evenly; min-height: 20%; flex-direction: column; align-items: center;}</style>
+</head>
+<body>
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown"><p>Recipes</p><div class="dropdown-content">
+            <a href="#" onclick="filterByCuisine('all')">All Recipes</a></div></div>
+        <p><a href="../home.html">Home</a></p></div>
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+        <div class="recipe-hero">
+            <img src="../images/shrimp-tacos.jpg" alt="Best Shrimp Tacos" />
+            <h1>Best Shrimp Tacos</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Crispy spiced shrimp wrapped in warm tortillas, topped with zesty slaw and creamy sauce — these shrimp tacos are a fiesta for your tastebuds!
+            </p>
+        </div>
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 10 minutes</li>
+                <li><strong>Total Time:</strong> 25 minutes</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Mexican</li>
+            </ol>
+        </div>
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 pound shrimp, peeled and deveined</li>
+                <li>1 tablespoon olive oil</li>
+                <li>1 teaspoon chili powder</li>
+                <li>1/2 teaspoon cumin</li>
+                <li>1/2 teaspoon garlic powder</li>
+                <li>Salt & pepper, to taste</li>
+                <li>8 small corn tortillas</li>
+                <li>2 cups shredded cabbage</li>
+                <li>1/4 cup mayonnaise</li>
+                <li>2 tablespoons lime juice</li>
+                <li>1 small jalapeño, minced</li>
+                <li>Fresh cilantro, for serving</li>
+            </ul>
+        </div>
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Toss shrimp with olive oil, chili powder, cumin, garlic powder, salt, and pepper.</li>
+                <li>In a skillet over medium-high, cook shrimp 2-3 minutes per side, until opaque.</li>
+                <li>Mix cabbage, mayo, lime juice, and jalapeño for the slaw.</li>
+                <li>Warm tortillas; assemble each with slaw, shrimp, and cilantro.</li>
+            </ol>
+        </div>
+    </div>
+    <script>function filterByCuisine(cuisine){window.location.href=`../recipe.html#${cuisine}`;}</script>
+</body>
+</html>

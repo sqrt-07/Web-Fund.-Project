@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aglio e Olio with Peas and Prosciutto - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/aglio-olio.jpg" alt="Aglio e Olio with Peas and Prosciutto" />
+            <h1>Aglio e Olio with Peas and Prosciutto</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A delightful twist on classic aglio e olio pasta featuring sweet peas and salty prosciutto for a
+                delicious, quick Italian meal.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Cook Time:</strong> 15 minutes</li>
+                <li><strong>Total Time:</strong> 25 minutes</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Italian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>12 ounces spaghetti or linguine</li>
+                <li>3 tablespoons extra-virgin olive oil</li>
+                <li>4 cloves garlic, thinly sliced</li>
+                <li>1 cup frozen peas, thawed</li>
+                <li>4 ounces prosciutto, sliced and chopped</li>
+                <li>1/4 teaspoon red pepper flakes (optional)</li>
+                <li>Salt and pepper, to taste</li>
+                <li>Grated Parmesan cheese, for serving</li>
+                <li>Fresh parsley, chopped, for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Cook pasta in salted boiling water until al dente. Reserve 1/2 cup pasta water then drain.</li>
+                <li>Meanwhile, heat olive oil in a large skillet over medium heat.</li>
+                <li>Add garlic and cook gently until fragrant but not browned, about 1-2 minutes.</li>
+                <li>Add prosciutto and peas, cook another 2-3 minutes until peas are tender.</li>
+                <li>Stir in red pepper flakes if using.</li>
+                <li>Add drained pasta to skillet and toss to coat. Add reserved pasta water as needed to loosen sauce.
+                </li>
+                <li>Season with salt and pepper, garnish with Parmesan and chopped parsley before serving.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

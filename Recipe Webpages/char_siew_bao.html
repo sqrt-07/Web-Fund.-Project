@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Char Siu Bao - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/char-siu-bao.jpg" alt="Char Siu Bao - Chinese BBQ Pork Buns" />
+            <h1>Char Siu Bao</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Soft, fluffy steamed buns filled with sweet and savory Chinese BBQ pork — a beloved dim sum classic
+                enjoyed worldwide.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 2 hours (includes dough rising)</li>
+                <li><strong>Cook Time:</strong> 15 minutes steaming</li>
+                <li><strong>Total Time:</strong> About 2 hours 30 minutes</li>
+                <li><strong>Servings:</strong> 12 buns</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Chinese, Dim Sum</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li><strong>For the dough:</strong></li>
+                <li>2 ¼ teaspoons active dry yeast</li>
+                <li>1 cup warm water</li>
+                <li>2 tablespoons sugar</li>
+                <li>2 ½ cups all-purpose flour</li>
+                <li>2 tablespoons vegetable oil</li>
+                <li>½ teaspoon salt</li>
+                <li><strong>For the filling:</strong></li>
+                <li>1 cup char siu (Chinese BBQ pork), diced</li>
+                <li>2 tablespoons oyster sauce</li>
+                <li>1 tablespoon soy sauce</li>
+                <li>1 teaspoon sugar</li>
+                <li>1 teaspoon cornstarch, dissolved in 2 tablespoons water</li>
+                <li>1 tablespoon vegetable oil</li>
+                <li>1 small onion, finely chopped</li>
+                <li>1 clove garlic, minced</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>In a bowl, dissolve yeast and sugar in warm water. Let sit 5-10 minutes until foamy.</li>
+                <li>In a large bowl, combine flour and salt. Add yeast mixture and vegetable oil. Knead until smooth and
+                    elastic (about 8-10 minutes).</li>
+                <li>Cover dough with a damp cloth and let rise in a warm place for about 1 hour until doubled in size.
+                </li>
+                <li>Meanwhile, prepare the filling: heat oil in a skillet over medium heat. Sauté onion and garlic until
+                    soft.</li>
+                <li>Add diced char siu, oyster sauce, soy sauce, and sugar. Stir well.</li>
+                <li>Add dissolved cornstarch and cook until mixture thickens. Remove from heat and let cool.</li>
+                <li>Divide dough into 12 equal pieces. Roll each into a circle and place 1-2 tablespoons filling in the
+                    center.</li>
+                <li>Gather edges and pinch to seal. Place on parchment squares and let rest for 20 minutes.</li>
+                <li>Steam buns over boiling water for 12-15 minutes until puffed and cooked through.</li>
+                <li>Serve hot as a delightful dim sum treat.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

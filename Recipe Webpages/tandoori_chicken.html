@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tandoori Chicken - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/tandoori-chicken.jpg" alt="Tandoori Chicken" />
+            <h1>Tandoori Chicken</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Juicy boneless chicken thighs marinated in a fragrant blend of yogurt and Indian spices, oven-broiled to
+                tender perfection with a smoky, vibrant crust — a beloved Indian classic.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Marinate Time:</strong> 1 hour to overnight</li>
+                <li><strong>Cook Time:</strong> 15 minutes</li>
+                <li><strong>Total Time:</strong> Approx. 2 hours</li>
+                <li><strong>Servings:</strong> 4</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Indian</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>5 whole cloves</li>
+                <li>2 dried guajillo chiles (or 2 chiles de arbol)</li>
+                <li>2 green cardamom pods, husks removed, seeds retained</li>
+                <li>1 black cardamom pod, husk removed, seeds retained</li>
+                <li>1 teaspoon coriander seeds</li>
+                <li>½ teaspoon fennel seeds</li>
+                <li>½ teaspoon fenugreek seeds</li>
+                <li>1 cup whole milk yogurt (plain, full fat)</li>
+                <li>¼ cup peanut or canola oil</li>
+                <li>2 tablespoons malt vinegar or lime juice</li>
+                <li>1 teaspoon kosher salt</li>
+                <li>¼ teaspoon ground cinnamon</li>
+                <li>¼ teaspoon paprika</li>
+                <li>¼ teaspoon ground turmeric</li>
+                <li>Pinch cayenne pepper</li>
+                <li>8 cloves garlic, minced</li>
+                <li>2-inch piece ginger, peeled and minced</li>
+                <li>1.5 pounds boneless, skinless chicken thighs</li>
+                <li>1 teaspoon honey</li>
+                <li>Salt and freshly ground black pepper, to taste</li>
+                <li>Extra lime wedges, for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Toast cloves, dried chiles, cardamoms, coriander seeds, fennel seeds, and fenugreek seeds in a dry
+                    skillet over medium heat until fragrant, about 3 minutes. Grind spices into a fine powder using a
+                    spice grinder.</li>
+                <li>In a large bowl, whisk the ground spices with yogurt, oil, malt vinegar, salt, cinnamon, paprika,
+                    turmeric, cayenne pepper, garlic, and ginger until well combined and aromatic.</li>
+                <li>Reserve ⅓ cup of the marinade for serving.</li>
+                <li>Prick chicken thighs with a fork and toss in the remaining marinade. Cover and refrigerate for at
+                    least 1 hour, preferably overnight.</li>
+                <li>Preheat broiler and line a baking sheet with foil. Place chicken thighs on the sheet; discard excess
+                    marinade but coat chicken evenly.</li>
+                <li>Broil for 5 minutes until starting to char, then reduce oven heat to 350°F and bake for an
+                    additional 10 minutes or until the internal temperature reaches 160°F (71°C).</li>
+                <li>While chicken cooks, heat reserved marinade with honey and ½ cup water in a small saucepan over
+                    medium-low heat until gently boiling; whisk until smooth. Season with salt and pepper.</li>
+                <li>Serve chicken hot with the sauce and lime wedges on the side.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

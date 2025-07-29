@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Best Tamales - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+        <div class="recipe-hero">
+            <img src="../images/tamales.jpg" alt="Best Tamales" />
+            <h1>Best Tamales</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Fluffy masa dough parcels filled with seasoned meat, wrapped in corn husks and steamed — the ultimate
+                Mexican comfort food for holidays and celebrations.
+            </p>
+        </div>
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 1 hour</li>
+                <li><strong>Cook Time:</strong> 1 hour 30 minutes</li>
+                <li><strong>Total Time:</strong> 2 hours 30 minutes</li>
+                <li><strong>Servings:</strong> 20 tamales</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Mexican</li>
+            </ol>
+        </div>
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>3 cups masa harina</li>
+                <li>2 cups chicken broth</li>
+                <li>1 teaspoon baking powder</li>
+                <li>1 teaspoon salt</li>
+                <li>2/3 cup lard or vegetable shortening</li>
+                <li>2 cups cooked, shredded beef or chicken</li>
+                <li>1 cup salsa or enchilada sauce</li>
+                <li>20 dried corn husks, soaked and drained</li>
+            </ul>
+        </div>
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Combine masa harina, broth, baking powder, and salt. Beat in lard until fluffy.</li>
+                <li>Spread 2 tablespoons masa dough on each corn husk. Add 1 tablespoon filling (meat mixed with salsa),
+                    fold and roll up the husks, folding the bottom up.</li>
+                <li>Steam tamales upright in a steamer for 1.5 hours or until dough is firm.</li>
+                <li>Let cool slightly before unwrapping. Enjoy warm!</li>
+            </ol>
+        </div>
+    </div>
+    <script>function filterByCuisine(cuisine) { window.location.href = `../recipe.html#${cuisine}`; }</script>
+</body>
+
+</html>

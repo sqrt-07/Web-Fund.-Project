@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All American Banana Split - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/banana-split.jpg" alt="All American Banana Split" />
+            <h1>All American Banana Split</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A nostalgic and delightful classic dessert featuring a split banana crowned with scoops of vanilla,
+                chocolate, and strawberry ice cream, topped with fresh fruit, nuts, whipped cream, and cherries.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Cook Time:</strong> No cooking required</li>
+                <li><strong>Total Time:</strong> 10 minutes</li>
+                <li><strong>Servings:</strong> 2 servings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> American</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 medium banana, peeled and split lengthwise</li>
+                <li>1 scoop vanilla ice cream</li>
+                <li>1 scoop chocolate ice cream</li>
+                <li>1 scoop strawberry ice cream</li>
+                <li>2 tablespoons sliced fresh strawberries or strawberry ice cream topping</li>
+                <li>2 tablespoons pineapple chunks or pineapple ice cream topping</li>
+                <li>2 tablespoons whipped cream</li>
+                <li>1 tablespoon chopped peanuts</li>
+                <li>1 tablespoon chocolate syrup</li>
+                <li>1 tablespoon caramel sundae syrup</li>
+                <li>2 maraschino cherries with stems</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Place the three scoops of ice cream in a dessert dish in a row.</li>
+                <li>Arrange the banana halves on each side of the ice cream, letting the ice cream sit in the middle.
+                </li>
+                <li>Top with sliced strawberries, pineapple chunks, whipped cream, chopped peanuts, chocolate syrup,
+                    caramel sundae syrup, and cherries.</li>
+                <li>Serve immediately and enjoy the nostalgic delight.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

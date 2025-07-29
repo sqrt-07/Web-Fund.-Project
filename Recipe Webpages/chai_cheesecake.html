@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Chai Cheesecakes with Parle-G Crusts and Salted Caramel - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/chai-cheesecakes.jpg"
+                alt="Mini Chai Cheesecakes with Parle-G Crusts and Salted Caramel" />
+            <h1>Mini Chai Cheesecakes with Parle-G Crusts and Salted Caramel</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Delightful mini cheesecakes featuring fragrant chai spices nestled on buttery Parle-G cookie crusts,
+                topped with decadent salted caramel — a perfect bite-sized treat.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 25 minutes</li>
+                <li><strong>Chill Time:</strong> 4 hours or overnight</li>
+                <li><strong>Total Time:</strong> Approx. 4 hours 30 minutes</li>
+                <li><strong>Yield:</strong> 12 mini cheesecakes</li>
+                <li><strong>Difficulty:</strong> Medium</li>
+                <li><strong>Cuisine:</strong> Fusion, Indian-inspired</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 ½ cups crushed Parle-G cookies (about 20 cookies)</li>
+                <li>6 tablespoons unsalted butter, melted</li>
+                <li>16 oz cream cheese, softened</li>
+                <li>¾ cup granulated sugar</li>
+                <li>2 large eggs</li>
+                <li>1 teaspoon vanilla extract</li>
+                <li>1 teaspoon chai spice mix (cinnamon, cardamom, ginger, cloves, black pepper)</li>
+                <li>Salted caramel sauce, for topping</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Preheat oven to 325°F (163°C). Line a 12-cup muffin tin with paper liners.</li>
+                <li>Mix crushed Parle-G cookies with melted butter until well combined. Press about 1 tablespoon into
+                    each liner to form crust.</li>
+                <li>Bake crusts for 8-10 minutes, then remove from oven.</li>
+                <li>In a large bowl, beat cream cheese and sugar until smooth. Add eggs one at a time, then stir in
+                    vanilla and chai spices.</li>
+                <li>Pour cream cheese mixture over each crust, filling cups almost full.</li>
+                <li>Bake for 18-20 minutes or until centers are just set. Remove and cool completely.</li>
+                <li>Chill in refrigerator for at least 4 hours or overnight.</li>
+                <li>Before serving, drizzle each mini cheesecake with salted caramel sauce.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+
+</body>
+
+</html>

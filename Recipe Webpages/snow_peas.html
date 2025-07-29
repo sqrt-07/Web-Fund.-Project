@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sautéed Snow Pea Tips - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/sauteed-snow-pea-tips.jpg" alt="Sautéed Snow Pea Tips" />
+            <h1>Sautéed Snow Pea Tips</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                Tender snow pea tips quickly sautéed with garlic and ginger for a light, nutritious side that
+                complements every meal.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Cook Time:</strong> 5 minutes</li>
+                <li><strong>Total Time:</strong> 15 minutes</li>
+                <li><strong>Servings:</strong> 2-3 servings</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Asian, Chinese-inspired</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>1 lb snow pea tips, washed and trimmed</li>
+                <li>2 tablespoons vegetable oil</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 teaspoon fresh ginger, minced</li>
+                <li>1 tablespoon soy sauce</li>
+                <li>Salt and pepper, to taste</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Heat oil in a large skillet or wok over medium heat.</li>
+                <li>Add minced garlic and ginger; sauté until fragrant, about 30 seconds.</li>
+                <li>Add snow pea tips and stir-fry for 2-3 minutes until tender-crisp.</li>
+                <li>Drizzle soy sauce and season with salt and pepper; toss to coat evenly.</li>
+                <li>Remove from heat and serve immediately as a fresh side dish.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

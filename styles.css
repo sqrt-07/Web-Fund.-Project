@@ -389,31 +389,32 @@ h1 {
 .info-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
 }
 
 .info-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
     position: relative;
-    padding-left: 50px;
-    font-size: 1.1em;
-    line-height: 1.6;
+    padding-left: 32px;
+    font-size: 1em;
+    color: #444;
+    min-width: 150px;
+    border-bottom: none;
 }
 
 .info-list li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #565C56;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 45%;
     display: block;
-    /* or flex if needed */
-}
-
-/* Remove border on last item */
-.info-list li:last-child {
-    border-bottom: none;
 }

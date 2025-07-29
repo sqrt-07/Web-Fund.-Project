@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Best Mexican Rice - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <style>
+        .section {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../contact_us.html">Contact Us</a></p>
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/mexican-rice.jpg" alt="Best Mexican Rice" />
+            <h1>Best Mexican Rice</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">
+                A fluffy, flavor-packed Mexican rice cooked with sautéed carrots, bell peppers, onions, and garlic,
+                toasted with tomato paste and simmered in a rich, savory tomato broth with cumin and oregano, topped
+                with fresh cilantro.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 10 minutes</li>
+                <li><strong>Cook Time:</strong> 25 minutes</li>
+                <li><strong>Total Time:</strong> 35 minutes</li>
+                <li><strong>Servings:</strong> 4-6</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Mexican</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>3 tablespoons extra-virgin olive oil</li>
+                <li>2 carrots, peeled and finely chopped</li>
+                <li>1 small green bell pepper, seeds and ribs removed, finely chopped</li>
+                <li>1 small yellow onion, finely chopped</li>
+                <li>3 garlic cloves, thinly sliced</li>
+                <li>2 cups long-grain rice, rinsed and drained</li>
+                <li>2 tablespoons tomato paste</li>
+                <li>2 1/2 cups low-sodium chicken broth</li>
+                <li>1 (14-ounce) can fire-roasted diced tomatoes, drained</li>
+                <li>1 (8-ounce) can tomato sauce</li>
+                <li>3/4 teaspoon ground cumin</li>
+                <li>1/2 teaspoon dried oregano</li>
+                <li>Kosher salt, to taste</li>
+                <li>Freshly ground black pepper, to taste</li>
+                <li>1/4 cup finely chopped fresh cilantro, for garnish</li>
+            </ul>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Heat the olive oil in a large skillet over medium-high heat. Add carrots, bell pepper, onion, and
+                    garlic. Cook, stirring frequently, until onions are softened and translucent, about 7 minutes.</li>
+                <li>Add the rice and tomato paste, stirring often; cook until the rice smells nutty and the paste
+                    darkens slightly, about 2 to 3 minutes.</li>
+                <li>Pour in the chicken broth, diced tomatoes, and tomato sauce. Add cumin, oregano, salt, and pepper.
+                    Stir to combine, scraping up browned bits from the pan bottom.</li>
+                <li>Bring the mixture to a boil, then cover and reduce heat to low. Simmer, stirring occasionally, until
+                    the rice is tender and the liquid is fully absorbed, about 17 minutes.</li>
+                <li>Fluff the rice with a fork, remove from heat, and top with fresh cilantro before serving.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Recipe navigation filter
+        function filterByCuisine(cuisine) {
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>
