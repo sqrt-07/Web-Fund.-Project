@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,52 +18,56 @@
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     form {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
     }
-    
-    h1, h2 {
+
+    h1,
+    h2 {
         text-align: center;
     }
-    
+
     div {
         border: 0;
     }
-    
-    label span{
+
+    label span {
         position: absolute;
         font-size: 14px;
         padding-right: 30px;
         color: #999;
         right: 0;
     }
-    
+
     .nav {
         display: flex;
         flex-direction: row-reverse;
         background-color: #565C56;
         padding: 20px;
         width: 100%;
-        margin:0;
+        margin: 0;
     }
-    
+
     .container {
         border-radius: 5px;
         padding: 20px;
     }
-    
-    input[type=text], input[type=email], select, textarea {
-        width: 100%; 
-        padding: 12px; 
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
-        resize: vertical 
+        resize: vertical
     }
 
     input[type=submit] {
@@ -80,6 +85,7 @@
 </style>
 
 <!-- Navigation Bar -->
+
 <body>
     <div class="nav">
         <p><a href="registration.html">Register</a></p>
@@ -90,76 +96,77 @@
     </div>
 
     <br>
-    <h1>Let’s Start a Conversation!</h1> 
+    <h1>Let’s Start a Conversation!</h1>
     <h2>Ask how we can help you:</h2>
 
-<!-- Form -->
+    <!-- Form -->
     <div class="container">
-    <form name="contact-form" action="" method="post" autocomplete="off">
+        <form name="contact-form" action="" method="post" autocomplete="off">
 
-        <div class="input-box">
-            <label for="fname">First Name <span>This field is not required</span></label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </div>
+            <div class="input-box">
+                <label for="fname">First Name <span>This field is not required</span></label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
 
-        <div class="input-box">
-            <label for="lname">Last Name <span>This field is not required</span> </label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        </div>
+            <div class="input-box">
+                <label for="lname">Last Name <span>This field is not required</span> </label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
 
-        <div class="input-box">
-            <label for="email">E-mail <span>Please enter an active email</span></label>
-            <input type="email" id="email" name="email" placeholder="Your email..">
-           <p class="error email-error"></p>
-        </div>
+            <div class="input-box">
+                <label for="email">E-mail <span>Please enter an active email</span></label>
+                <input type="email" id="email" name="email" placeholder="Your email..">
+                <p class="error email-error"></p>
+            </div>
 
-        <div class="input-box">
-            <label for="message">Message <span>Give us your message</span></label>
-            <textarea id="text" name="message" placeholder="Write something.." style="height:200px"></textarea>
-            <p class="error message-error"></p>
-        </div>
+            <div class="input-box">
+                <label for="message">Message <span>Give us your message</span></label>
+                <textarea id="text" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                <p class="error message-error"></p>
+            </div>
 
-        <p class="success register-success"></p>
-        <br>
-        <input type="submit" value="Submit">
-        
+            <p class="success register-success"></p>
+            <br>
+            <input type="submit" value="Submit">
 
-    </form>
 
-<!-- JavaScript Code -->
-    <script>
-        function showError(errorElement, errorMessage){
-    document.querySelector("."+errorElement).classList.add("display-error");
-    document.querySelector("."+errorElement).innerHTML = errorMessage;
-    }
+        </form>
 
-        function clearError(){
-            let errors = document.querySelectorAll(".error");
-            for(let error of errors){
-                error.classList.remove("display-error");
-            }
-        }
-
-        let form = document.forms['contact-form'];
-        form.onsubmit = function(event){
-
-            clearError();
-
-            if(form.email.value === ""){
-                showError("email-error", "You have to enter your email");
-                return false;
+        <!-- JavaScript Code -->
+        <script>
+            function showError(errorElement, errorMessage) {
+                document.querySelector("." + errorElement).classList.add("display-error");
+                document.querySelector("." + errorElement).innerHTML = errorMessage;
             }
 
-            if(form.message.value === ""){
-                showError("message-error", "Please enter your message");
-                return false;
+            function clearError() {
+                let errors = document.querySelectorAll(".error");
+                for (let error of errors) {
+                    error.classList.remove("display-error");
+                }
             }
 
-            document.querySelector(".success").classList.add("display-success");
-            document.querySelector(".success").innerHTML = "Submission received. Thanks for your message!"
-            event.preventDefault();
-        }
-    </script>
+            let form = document.forms['contact-form'];
+            form.onsubmit = function (event) {
+
+                clearError();
+
+                if (form.email.value === "") {
+                    showError("email-error", "You have to enter your email");
+                    return false;
+                }
+
+                if (form.message.value === "") {
+                    showError("message-error", "Please enter your message");
+                    return false;
+                }
+
+                document.querySelector(".success").classList.add("display-success");
+                document.querySelector(".success").innerHTML = "Submission received. Thanks for your message!"
+                event.preventDefault();
+            }
+        </script>
     </div>
 </body>
+
 </html>
