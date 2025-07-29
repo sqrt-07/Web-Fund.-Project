@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediterranean Quinoa Bowl - Ingrédient Magique</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <style>
+        /* ========== NEW CSS ADDED FOR RECIPE DETAIL PAGE ========== */
+
+        /* Recipe detail page specific styling */
+        .recipe-detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-button {
+            background-color: #565C56;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #404740;
+        }
+
+        .recipe-hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-hero img {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .recipe-hero h1 {
+            font-size: 2.5em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .recipe-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .recipe-section h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #565C56;
+        }
+
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.1em;
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .steps-list {
+            list-style-type: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 50px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 15px;
+            background-color: #565C56;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <p><a href="../sign_in.html">Sign In</a></p>
+        <p><a href="../registration.html">Register</a></p>
+        <p><a href="../contact_us.html">Contact</a></p>
+        <!-- Added dropdown functionality for food selection-->
+        <div class="dropdown">
+            <p>Recipes</p>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
+            </div>
+        </div>
+        <p><a href="../home.html">Home</a></p>
+    </div>
+
+    <!-- Recipe Detail Page -->
+    <div class="recipe-detail-container">
+        <button class="back-button" onclick="window.location.href='../recipe.html'">← Back to Recipes</button>
+
+        <div class="recipe-hero">
+            <img src="../images/tahchin.jpg" alt="Tachin">
+            <h1>Tachin</h1>
+            <p style="color: #666; font-size: 1.1em; margin-top: 10px;">A golden saffron-infused rice terrine layered
+                with tender, spiced chicken and velvety yogurt, crowned with a crisp, caramelized crust — an elegant
+                Persian classic celebrating harmony in every bite.
+            </p>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Ingredients</h3>
+            <ul class="ingredients-list">
+                <li>2 cups basmati rice</li>
+                <li>1 cup yogurt</li>
+                <li>1 egg yolk</li>
+                <li>1/2 tsp saffron (dissolved)</li>
+                <li>1 cup cooked chicken (shredded)</li>
+                <li>1 onion</li>
+                <li>2 tbsp barberries</li>
+                <li>1 tbsp sugar</li>
+                <li>Salt</li>
+                <li>Pepper</li>
+                <li>Oil or Butter</li>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Instructions</h3>
+            <ol class="steps-list">
+                <li>Parboil rice, drain, and set aside.</li>
+                <li>Mix yogurt, egg yolk, saffron, salt, and pepper with half the rice.</li>
+                <li>Spread the yogurt and rice mixture in a greased pot.</li>
+                <li>Layer sautéed chicken (cooked with onion, salt, and pepper) over the rice mixture.</li>
+                <li>Top with the remaining plain rice.</li>
+                <li>Cook on low heat for 1 hour.</li>
+                <li>Separately, sauté barberries with sugar in butter.</li>
+                <li>Sprinkle the sautéed barberries on top before serving.</li>
+            </ol>
+        </div>
+
+        <div class="recipe-section">
+            <h3>Recipe Info</h3>
+            <ol class="info-list">
+                <li><strong>Prep Time:</strong> 15 minutes</li>
+                <li><strong>Cook Time:</strong> 1hr 5 minutes</li>
+                <li><strong>Total Time:</strong> 1hr 20 minutes</li>
+                <li><strong>Servings:</strong> 9-12 people</li>
+                <li><strong>Difficulty:</strong> Easy</li>
+                <li><strong>Cuisine:</strong> Persian</li>
+            </ol>
+
+        </div>
+    </div>
+
+    <script>
+        // Filter recipes by cuisine type from dropdown menu (for navigation)
+        function filterByCuisine(cuisine) {
+            // Redirect to main recipes page with filter
+            window.location.href = `../recipe.html#${cuisine}`;
+        }
+    </script>
+</body>
+
+</html>

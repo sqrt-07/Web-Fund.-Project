@@ -1,335 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingrédient Magique</title>
-    <style>
-        /* ========== CSS FROM ORIGINAL CODE (NO CHANGES) ========== */
-        
-        body{
-            min-width: fit-content;
-            background-color: #E5E3D9;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow: auto;
-        }
-
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        button {
-            padding: 5px;
-            height: 2em;
-            align-self: center;
-            margin: 0 10px;
-        }
-
-        button a{
-            color: black;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .nav p {
-            margin-right: 10px;
-            padding: 10px;
-            color: white;
-            background-color: #565C56;
-            /* ADDED: Hover effect for navigation buttons */
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .nav p:hover {
-            background-color: #404740;  /* Darker shade on hover */
-        }
-
-        .nav{
-            display: flex;
-            flex-direction: row-reverse;
-            background-color: #565C56;
-            padding: 20px;
-            margin:0;
-            width: 100%;
-        }
-
-        input[type=search] {
-            padding: 5px;
-            margin: 3px;
-            font-size: 1em;
-            border-radius: 3px;
-            border-color: #565C56;
-            border-style: solid;
-        }
-
-        .base {
-            text-align: center;
-            margin: 60px;
-        }
-
-        .base h1,h3,form {
-            padding: 3px;
-        }
-
-        h1{
-            font-size: 3.5em;
-        }
-
-        .subheadings{ 
-            margin: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .section img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .section p {
-            display: block;
-            padding-left: 10px;
-        }
-
-        /* ========== MODIFIED CSS FROM ORIGINAL CODE ========== */
-        
-        .section {
-            display: flex;
-            justify-content:space-evenly;
-            min-height: 20%;
-            /* MODIFIED: Changed to flex-direction: column and align-items: center 
-               to display recipes vertically instead of horizontally */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* MODIFIED: Added hover effects to original .nav p styling */
-        .nav p {
-            margin-right: 10px;
-            padding: 10px;
-            color: white;
-            background-color: #565C56;
-            /* ADDED: Hover effect for navigation buttons */
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .nav p:hover {
-            background-color: #404740;  /* Darker shade on hover */
-        }
-
-        /* ========== NEW CSS ADDED FOR THIS WEBPAGE ========== */
-        
-        /* Dropdown functionality for cuisine selection */
-        .dropdown {
-            position: relative;
-        }
-
-        /* ADDED: Ensure dropdown p element has same styling as other nav p elements */
-        .dropdown p {
-            margin-right: 10px;
-            padding: 10px;
-            color: white;
-            background-color: #565C56;
-            /* ADDED: Same hover effect for dropdown button */
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .dropdown p:hover {
-            background-color: #404740;  /* Darker shade on hover */
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: white;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        /* Fixed hover issue - dropdown stays visible when hovering over content */
-        .dropdown:hover .dropdown-content,
-        .dropdown-content:hover {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: black !important;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Recipe card layout to match original image design */
-        .recipe-card {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 15px;
-            margin: 15px 0;
-            max-width: 600px;
-            border-radius: 3px;
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-        }
-
-        .recipe-card:hover {
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Recipe image styling for cards */
-        .recipe-image {
-            width: 150px;
-            height: 120px;
-            object-fit: cover;
-            margin-right: 20px;
-            border-radius: 3px;
-        }
-
-        /* Recipe content area styling */
-        .recipe-content {
-            flex: 1;
-        }
-
-        .recipe-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: black;
-        }
-
-        .recipe-description {
-            color: #333;
-            line-height: 1.4;
-        }
-    </style>
+    <title>Ingrédient Magique - Recipes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <div class="nav">
-        <p><a href="#">Login</a></p>
-        <p><a href="#">Sign Up</a></p>
-        <p><a href="#">Contact</a></p>
-        <!-- NEW: Added dropdown functionality for cuisine selection -->
+        <p><a href="sign_in.html">Sign In</a></p>
+        <p><a href="registration.html">Register</a></p>
+        <p><a href="contact_us.html">Contact</a></p>
+        <!-- Added dropdown functionality for food selection-->
         <div class="dropdown">
             <p>Recipes</p>
             <div class="dropdown-content">
-                <a href="#" onclick="filterByCuisine('mediterranean')">Mediterranean</a>
-                <a href="#" onclick="filterByCuisine('asian')">Asian</a>
-                <a href="#" onclick="filterByCuisine('mexican')">Mexican</a>
                 <a href="#" onclick="filterByCuisine('american')">American</a>
-                <a href="#" onclick="filterByCuisine('italian')">Italian</a>
+                <a href="#" onclick="filterByCuisine('asian')">Chinese</a>
                 <a href="#" onclick="filterByCuisine('indian')">Indian</a>
+                <a href="#" onclick="filterByCuisine('iranian')">Iranian</a>
+                <a href="#" onclick="filterByCuisine('italian')">Italian</a>
+                <a href="#" onclick="filterByCuisine('mexican')">Mexican</a>
                 <a href="#" onclick="filterByCuisine('all')">All Recipes</a>
             </div>
         </div>
-        <p><a href="index.html">Home</a></p>
+        <p><a href="home.html">Home</a></p>
     </div>
 
     <!-- Home Page -->
-    <div class="base">
+    <div class="base-recipe">
         <h1>Ingrédient Magique</h1>
-        
+
         <div>
             <input type="search" placeholder="Search recipes..." id="searchInput" onkeyup="searchRecipes()">
         </div>
-        
+
         <div class="subheadings">Most Popular Recipes</div>
-        
-        <!-- MODIFIED: Changed structure to use recipe cards instead of featuredRecipes class -->
+
         <div class="section" id="recipeSection">
-            <!-- NEW: Recipe cards with data-cuisine attributes for filtering -->
-            <!-- COMMENTED OUT: Uncomment href when separate HTML files are created -->
-            <!-- <a href="recipe1.html" class="recipe-card" data-cuisine="mediterranean"> -->
-            <a href="#" class="recipe-card" data-cuisine="mediterranean">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop" alt="Mediterranean Bowl" class="recipe-image">
+            <!--Iranian food goes here-->
+
+            <a href="../Web-Fund.-Project/Recipe Webpages/tahchin.html" class="recipe-card" data-cuisine="iranian">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop"
+                    alt="Tachin" class="recipe-image">
                 <div class="recipe-content">
-                    <div class="recipe-title">Mediterranean Quinoa Bowl</div>
-                    <div class="recipe-description">Food name here when click links to full recipe page<br>Food description here</div>
+                    <div class="recipe-title">Tachin</div>
+                    <div class="recipe-description">A golden saffron-infused rice terrine layered
+                        with tender, spiced chicken and velvety yogurt, crowned with a crisp, caramelized crust — an
+                        elegant
+                        Persian classic celebrating harmony in every bite</div>
                 </div>
             </a>
 
-            <!-- <a href="recipe2.html" class="recipe-card" data-cuisine="asian"> -->
-            <a href="#" class="recipe-card" data-cuisine="asian">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=200&fit=crop" alt="Asian Fusion Bowl" class="recipe-image">
-                <div class="recipe-content">
-                    <div class="recipe-title">Asian Fusion Delight</div>
-                    <div class="recipe-description">Food name here when click links to full recipe page<br>Food description here</div>
-                </div>
-            </a>
+            <!--Asian food goes here-->
 
-            <!-- <a href="recipe3.html" class="recipe-card" data-cuisine="american"> -->
-            <a href="#" class="recipe-card" data-cuisine="american">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=300&h=200&fit=crop" alt="Garden Bowl" class="recipe-image">
-                <div class="recipe-content">
-                    <div class="recipe-title">Rustic Garden Bowl</div>
-                    <div class="recipe-description">Food name here when click links to full recipe page<br>Food description here</div>
-                </div>
-            </a>
+            <!--American food goes here-->
 
-            <!-- <a href="recipe4.html" class="recipe-card" data-cuisine="american"> -->
-            <a href="#" class="recipe-card" data-cuisine="american">
-                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop" alt="Protein Bowl" class="recipe-image">
-                <div class="recipe-content">
-                    <div class="recipe-title">Protein Power Bowl</div>
-                    <div class="recipe-description">Food name here when click links to full recipe page<br>Food description here</div>
-                </div>
-            </a>
+            <!--Mexican food goes here-->
 
-            <!-- <a href="recipe5.html" class="recipe-card" data-cuisine="mexican"> -->
-            <a href="#" class="recipe-card" data-cuisine="mexican">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop" alt="Mexican Bowl" class="recipe-image">
-                <div class="recipe-content">
-                    <div class="recipe-title">Spicy Mexican Fiesta</div>
-                    <div class="recipe-description">Food name here when click links to full recipe page<br>Food description here</div>
-                </div>
-            </a>
+
         </div>
     </div>
 
     <script>
-        /* ========== NEW JAVASCRIPT FUNCTIONS ADDED ========== */
-        
-        // Search functionality - filters recipes based on title and description
+
+        // Search functionality filters recipes based on title and description
         function searchRecipes() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const recipeCards = document.querySelectorAll('.recipe-card');
-            
+
             recipeCards.forEach(card => {
                 const title = card.querySelector('.recipe-title').textContent.toLowerCase();
                 const description = card.querySelector('.recipe-description').textContent.toLowerCase();
-                
+
                 if (title.includes(searchTerm) || description.includes(searchTerm)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
+
         }
 
         // Filter recipes by cuisine type from dropdown menu
         function filterByCuisine(cuisine) {
             const recipeCards = document.querySelectorAll('.recipe-card');
-            
+
             recipeCards.forEach(card => {
                 const cardCuisine = card.getAttribute('data-cuisine');
-                
+
                 if (cuisine === 'all' || cardCuisine === cuisine) {
                     card.style.display = 'flex';
                 } else {
@@ -338,24 +100,7 @@
             });
         }
 
-        // Function to add new recipe programmatically (for future use)
-        function addNewRecipe(recipeData) {
-            const recipeSection = document.getElementById('recipeSection');
-            const newRecipeCard = document.createElement('a');
-            newRecipeCard.href = recipeData.href || '#';
-            newRecipeCard.className = 'recipe-card';
-            newRecipeCard.setAttribute('data-cuisine', recipeData.cuisine);
-            
-            newRecipeCard.innerHTML = `
-                <img src="${recipeData.image}" alt="${recipeData.title}" class="recipe-image">
-                <div class="recipe-content">
-                    <div class="recipe-title">${recipeData.title}</div>
-                    <div class="recipe-description">${recipeData.description}</div>
-                </div>
-            `;
-            
-            recipeSection.appendChild(newRecipeCard);
-        }
     </script>
 </body>
+
 </html>
