@@ -19,19 +19,21 @@
     body {
       width: 100%;
       overflow-y: scroll;
-      }
+    }
 
     input[type=submit] {
-      background-color: #04AA6D;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 1000px;
+      padding: .85em 4em;
+      background-color: #45a049;
+      font: inherit;
+      color: black;
+      text-transform: uppercase;
+      transition: 150ms ease;
     }
 
     input[type=submit]:hover {
-      background-color: #45a049;
+      background-color: #E5E3D9;
     }
     
     form{
@@ -54,8 +56,6 @@
       flex-shrink: 0;
       height: 50px;
       width: 50px;
-      
-      
       border-radius: 10px 0 0 10px;
       display: flex;
       justify-content: center;
@@ -72,8 +72,18 @@
       padding: 1em;
       font: inherit;
       border-radius: 10px 10px 10px 10px;
-      border: none;
+      border-left: none;
+      border: 2px solid #E5E3D9;
+      transition: 150ms ease;
+    }
 
+    form input:hover{
+      border: 2px solid;
+    }
+
+    form input:focus{
+      outline: none;
+      border-color: black;
     }
 
     .form-box{
@@ -104,23 +114,25 @@
   <div class="form-box">
     <form name="register-form" onsubmit="return register(event)" autocomplete="off">
       <div class="input-box">
-        <label for="reg-name"><i class="fa-solid fa-user"></i></label>
-        <input type="text" id="reg-name" name="fullname" placeholder="Your name...">
+        <label for="name"><i class="fa-solid fa-user"></i></label>
+        <input type="text" id="name" name="fullname" placeholder="Your name...">
       </div>
 
       <div class="input-box">
-        <label for="reg-email"><i class="fa-solid fa-envelope"></i></label>
-        <input type="email" id="reg-email" name="email" placeholder="Your email...">
+        <label for="email"><i class="fa-solid fa-envelope"></i></label>
+        <input type="email" id="email" name="email" placeholder="Your email...">
+        <p class="error email-error"></p>
       </div>
 
       <div class="input-box">
-        <label for="reg-pass"><i class="fa-solid fa-unlock"></i></label>
-        <input type="password" id="reg-pass" name="password" placeholder="Your password...">
+        <label for="password"><i class="fa-solid fa-unlock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Your password...">
+        <p class="error password-error"></p>
       </div>
 
       <div class="input-box">
-        <label for="reg-confirm"><i class="fa-solid fa-lock"></i></label>
-        <input type="password" id="reg-confirm" name="confirm" placeholder="Confirm your password...">
+        <label for="confirm"><i class="fa-solid fa-lock"></i></label>
+        <input type="password" id="confirm" name="confirm" placeholder="Confirm your password...">
       </div>
 
       <p class="error" id="reg-error"></p>
@@ -132,7 +144,84 @@
 
   <!-- Registration Script -->
   <script>
-    function register(event) {
+    /*
+    1st test form
+    function showError(errorElement, errorMessage){
+    document.querySelector("."+errorElement).classList.add("display-error");
+    document.querySelector("."+errorElement).innerHTML = errorMessage;
+    }
+
+        function clearError(){
+            let errors = document.querySelectorAll(".error");
+            for(let error of errors){
+                error.classList.remove("display-error");
+            }
+        }
+
+        let form = document.forms['register-form'];
+        form.onsubmit = function(event){
+
+            clearError();
+
+            if(form.email.value === ""){
+                showError("email-error", "You have to enter your email");
+                return false;
+            }
+
+            if(form.password.value === ""){
+                showError("password-error", "Please enter your password");
+                return false;
+            }
+
+            document.querySelector(".success").classList.add("display-success");
+            document.querySelector(".success").innerHTML = "Submission received. Thanks for your message!"
+            event.preventDefault();
+        }
+    
+
+        2nd test form
+    const form = document.getElementByID('form');
+    const name_input = document.getElementByID('name-input');
+    const email_input = document.getElementByID('email-input');
+    const password_input = document.getElementByID('password-input');
+    const repeat_input = document.getElementByID('repeat-input');
+    const error_message = document.getElementByID('error-message')
+
+    form.addEventListener('submit', (e) => {
+      let errors = []
+
+      if(name_input){
+        errors = getSignupFormErrors(name_input.value, email_input.value, password_input.value, repeat_input.value)
+      }
+      else{
+        errors = getLoginFormErrors()
+      }
+
+      if(errors.length > 0){
+        e.preventDefault()
+        error_message.innerText = errors.join(". ")
+      }
+    })
+
+    function getSignupFormErrors(name,email,password,repeatPassword){
+      let errors = []
+
+      if(name === '' || name == null){
+        errors.push('Name is required')
+      }
+      if(email === '' || email == null){
+        errors.push('Email is required')
+      }
+      if(password === '' || password == null){
+        errors.push('Password is required')
+      }
+      
+      return errors;
+    }
+      */
+
+  /* default form */
+function register(event) {
       event.preventDefault();
 
       const name = document.getElementById("reg-name").value.trim();
@@ -169,7 +258,7 @@
         window.location.href = "sign_in.html";
       }, 2000);
     }
-  </script>
 
+  </script>
 </body>
 </html>
