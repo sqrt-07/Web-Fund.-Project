@@ -8,36 +8,73 @@
   <script src="https://kit.fontawesome.com/fb7658425d.js" crossorigin="anonymous"></script>
 </head>
 <style>
-  html{
-    text-align: center;
-  }
-  body {
-        width: 100%;
-        overflow-y: scroll;
-    }
-    
-    input[type=text], input[type=email], input[type=password] {
-        width: 100%; 
-        padding: 12px; 
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box; 
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical 
+    *{
+      padding: 0px;
     }
 
+    html{
+      text-align: center;
+    }
+    
+    body {
+      width: 100%;
+      overflow-y: scroll;
+      }
+
     input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+      background-color: #45a049;
+    }
+    
+    form{
+      width: min(400px, 100%);
+      margin-top: 20px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    form > div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    form label{
+      flex-shrink: 0;
+      height: 50px;
+      width: 50px;
+      background-color: rgb(227, 116, 227);
+      fill: var(--base-color);
+      color: var(--base-color);
+      border-radius: 10px 0 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    form input{
+      box-sizing: border-box;
+      flex-grow: 1;
+      min-width: 0;
+      height: 50px;
+      padding: 1em;
+      font: inherit;
+      border-radius: 0 10px 10px 0;
+      border: none;
+      background-color: rgb(187, 213, 222);
     }
 
     .form-box{
@@ -55,7 +92,7 @@
   <!-- Navigation Bar -->
     <div class="nav">
         <p><a href="registration.html">Register</a></p>
-        <p><a href="sign_in.html">Sign In</a></p>
+        <p><a href="registration.html">Sign In</a></p>
         <p><a href="contact_us.html">Contact Us</a></p>
         <p><a href="recipe.html">Recipes</a> </p>
         <p><a href="home.html">Home</a></p>
@@ -68,22 +105,22 @@
   <div class="form-box">
     <form name="register-form" onsubmit="return register(event)" autocomplete="off">
       <div class="input-box">
-        <label for="reg-name"><i class="fa-solid fa-user"></i>Full Name</label>
+        <label for="reg-name"><i class="fa-solid fa-user"></i></label>
         <input type="text" id="reg-name" name="fullname" placeholder="Your name...">
       </div>
 
       <div class="input-box">
-        <label for="reg-email"><i class="fa-solid fa-envelope"></i>Email</label>
+        <label for="reg-email"><i class="fa-solid fa-envelope"></i></label>
         <input type="email" id="reg-email" name="email" placeholder="Your email...">
       </div>
 
       <div class="input-box">
-        <label for="reg-pass"><i class="fa-solid fa-lock"></i>Password</label>
+        <label for="reg-pass"><i class="fa-solid fa-lock"></i></label>
         <input type="password" id="reg-pass" name="password" placeholder="Your password...">
       </div>
 
       <div class="input-box">
-        <label for="reg-confirm"><i class="fa-solid fa-lock"></i>Confirm Password</label>
+        <label for="reg-confirm"><i class="fa-solid fa-lock"></i></label>
         <input type="password" id="reg-confirm" name="confirm" placeholder="Confirm your password...">
       </div>
 
