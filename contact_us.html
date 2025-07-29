@@ -6,7 +6,6 @@
     <title>Ingredient Magique - Contact Us</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <style>
     body {
         width: 100%;
@@ -78,20 +77,9 @@
     input[type=submit]:hover {
         background-color: #45a049;
     }
-
-    .popup {
-        position: absolute;
-        background-color: #333;
-        color: #fff;
-        padding: 6px 10px;
-        font-size: 14px;
-        display: none;
-        z-index: 10;
-        pointer-events: none;
-    }
-
 </style>
 
+<!-- Navigation Bar -->
 <body>
     <div class="nav">
         <button class="register"><a href="registration.html">Register</a></button> 
@@ -104,10 +92,10 @@
     <br>
     <h1>Let’s Start a Conversation!</h1> 
     <h2>Ask how we can help you:</h2>
+
+<!-- Form -->
     <div class="container">
     <form name="contact-form" action="" method="post" autocomplete="off">
-
-        <p class="success register-success"></p>
 
         <div class="input-box">
             <label for="fname">First Name <span>This field is not required</span></label>
@@ -131,13 +119,14 @@
             <p class="error message-error"></p>
         </div>
 
+        <p class="success register-success"></p>
+        <br>
         <input type="submit" value="Submit">
+        
 
     </form>
 
-    <div id="popup" class="popup"></div>
-
-    
+<!-- JavaScript Code -->
     <script>
         function showError(errorElement, errorMessage){
     document.querySelector("."+errorElement).classList.add("display-error");
