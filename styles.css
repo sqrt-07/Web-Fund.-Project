@@ -1,4 +1,4 @@
-body{
+body {
     min-width: fit-content;
     background-color: #E5E3D9;
     color: black;
@@ -9,7 +9,7 @@ body{
 * {
     margin: 0;
     box-sizing: border-box;
-    }
+}
 
 button {
     padding: 5px;
@@ -18,7 +18,7 @@ button {
     margin: 0 10px;
 }
 
-button a{
+button a {
     color: black;
 }
 
@@ -27,19 +27,28 @@ a {
     color: white;
 }
 
+/* Modified it: Added hover effects to original .nav p */
 .nav p {
     margin-right: 10px;
     padding: 10px;
     color: white;
     background-color: #565C56;
+    /* ADDED: Hover effect for navigation buttons */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.nav{
+.nav p:hover {
+    background-color: #404740;
+    /* Darker shade on hover */
+}
+
+.nav {
     display: flex;
     flex-direction: row-reverse;
     background-color: #565C56;
     padding: 20px;
-    margin:0;
+    margin: 0;
     width: 100%;
 }
 
@@ -59,11 +68,13 @@ input[type=search] {
     margin: 60px;
 }
 
-.base h1,h3,form {
+.base h1,
+h3,
+form {
     padding: 3px;
 }
 
-h1{
+h1 {
     font-size: 3.5em;
 }
 
@@ -80,7 +91,8 @@ h1{
 
 .descriptionText {
     width: 50%;
-    min-height: 100px; /*when the viewport width is narrow enough the text box will exit the bounds of the descriptionBox (image background) */
+    min-height: 100px;
+    /*when the viewport width is narrow enough the text box will exit the bounds of the descriptionBox (image background) */
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -88,7 +100,7 @@ h1{
     background-color: rgba(229, 227, 217, 0.8);
 }
 
-.subheadings{ 
+.subheadings {
     margin: 10px;
     font-size: 1.5em;
     font-weight: bold;
@@ -97,7 +109,7 @@ h1{
 
 .section {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     min-height: 20%;
 }
 
@@ -145,27 +157,27 @@ h1{
     border-style: solid;
 }
 
-.error{
-	color: #af4242;
-	background-color: #fde8ec;
-	padding: 10px;
-	display: none;
+.error {
+    color: #af4242;
+    background-color: #fde8ec;
+    padding: 10px;
+    display: none;
 }
 
-.display-error{
+.display-error {
     display: block;
     margin-bottom: 20px;
     transform: translateY(-20px);
 }
 
-.success{
-	margin-bottom: 30px;
-	color: green;
-	background-color: #d2ffd2;
-	padding: 10px;
-	display: none;
+.success {
+    margin-bottom: 30px;
+    color: green;
+    background-color: #d2ffd2;
+    padding: 10px;
+    display: none;
 }
 
-.success.display-success{
-	display: block;
+.success.display-success {
+    display: block;
 }
