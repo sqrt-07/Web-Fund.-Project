@@ -6,7 +6,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ingrédient Magique - Sign In</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/fb7658425d.js" crossorigin="anonymous"></script>
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  
+  .form-box a{
+    color: blue;
+    text-decoration: underline;
+  }
+
+  input[type=submit] {
+    margin-top: 10px;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: #45a049;
+    font: inherit;
+    color: black;
+    text-transform: uppercase;
+    transition: 150ms ease;
+  }
+
+  input[type=submit]:hover {
+    background-color: #E5E3D9;
+  }
+
+  form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 10px 10px 10px 10px;
+    border-left: none;
+    border: 2px solid #E5E3D9;
+    transition: 150ms ease;
+  }
+
+  form input:hover {
+    border: 2px solid;
+  }
+
+  form input:focus {
+    outline: none;
+    border-color: black;
+  }
+
+  .form-box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .incorrect input {
+  border: 2px solid red;
+}
+
+  #login-error{
+    color: red;
+  }  
+
+  #login-success{
+    color: green;
+  }  
+</style>
 
 <body>
 
@@ -21,55 +124,93 @@
 
   <!-- Sign In Header -->
   <h1 style="text-align:center; margin-top: 40px;">Welcome Back!</h1>
-  <h2 style="text-align:center;">Please sign in to continue</h2>
+  <h2 style="text-align:center;">Please sign in to continue</h2><br>
+  <p id="login-error"></p>
+  <p id="login-success"></p>
 
   <!-- Sign In Form -->
   <div class="form-box">
     <form id="loginForm">
       <div class="input-box">
-        <label for="loginEmail">Email</label>
-        <input type="email" id="loginEmail" placeholder="Enter your email..." required>
+        <label for="loginEmail"><i class="fa-solid fa-envelope"></i></label>
+        <input type="email" id="loginEmail" placeholder="Enter your email...">
       </div>
 
       <div class="input-box">
-        <label for="loginPassword">Password</label>
-        <input type="password" id="loginPassword" placeholder="Enter your password..." required>
+        <label for="loginPassword"><i class="fa-solid fa-lock"></i></label>
+        <input type="password" id="loginPassword" placeholder="Enter your password...">
       </div>
 
-      <p class="error" id="login-error"></p>
-      <p class="success" id="login-success"></p>
-
       <input type="submit" value="Login">
+      <br>
+      <p>Don't have an account? <a href="registration.html">Register here!</a></p>
     </form>
   </div>
 
   <!-- JavaScript for Login -->
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  const form = document.getElementById('loginForm');
+  const email_input = document.getElementById('loginEmail');
+  const password_input = document.getElementById('loginPassword');
+  const error_message = document.getElementById('login-error');
+  const success_message = document.getElementById('login-success');
 
-      const email = document.getElementById('loginEmail').value.trim();
-      const password = document.getElementById('loginPassword').value;
-      const error = document.getElementById('login-error');
-      const success = document.getElementById('login-success');
+  function getLoginFormErrors(email, password) {
+    let errors = [];
 
-      error.textContent = "";
-      success.textContent = "";
+    if (email === '' || email == null) {
+      errors.push('Email is required');
+      email_input.parentElement.classList.add('incorrect');
+    }
 
-      const storedUser = JSON.parse(localStorage.getItem(email));
+    if (password === '' || password == null) {
+      errors.push('Password is required');
+      password_input.parentElement.classList.add('incorrect');
+    }
 
-      if (storedUser && storedUser.password === password) {
-        localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
-        success.textContent = "Login successful! Redirecting...";
-        setTimeout(() => {
-          window.location.href = 'home.html';
-        }, 1500);
-      } else {
-        error.textContent = "Invalid email or password.";
-      }
-    });
-  </script>
+    return errors;
+  }
 
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    document.querySelectorAll('.incorrect').forEach(el => el.classList.remove('incorrect'));
+    error_message.innerText = "";
+    success_message.innerText = "";
+
+    let email = email_input.value.trim();
+    let password = password_input.value;
+
+    let errors = getLoginFormErrors(email, password);
+
+    if (errors.length > 0) {
+      error_message.innerText = errors.join(". ");
+      return;
+    }
+
+    const storedUserJSON = localStorage.getItem(email);
+    if (!storedUserJSON) {
+      error_message.textContent = "Account not found.";
+      email_input.parentElement.classList.add('incorrect');
+      return;
+    }
+
+    const storedUser = JSON.parse(storedUserJSON);
+
+    if (storedUser.password !== password) {
+      error_message.textContent = "Incorrect password.";
+      password_input.parentElement.classList.add('incorrect');
+      return;
+    }
+
+    localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
+    localStorage.setItem('isLoggedIn', 'true');
+    success_message.textContent = "Login successful! Redirecting...";
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 1500);
+  });
+</script>
 </body>
 
 </html>
