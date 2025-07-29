@@ -97,6 +97,12 @@
     justify-content: center;
   }
 
+  .form-box a{
+    color: blue;
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
+
   .incorrect input {
   border: 2px solid red;
 }
@@ -147,10 +153,11 @@
       </div>
 
       <input type="submit" value="Sign Up">
+      <p>Already have an account? <a href="sign_in.html">Sign in here!</a></p>
     </form>
   </div>
   <script>
-    const form = document.getElementById('register-form');
+const form = document.getElementById('register-form');
 const name_input = document.getElementById('name');
 const email_input = document.getElementById('email');
 const password_input = document.getElementById('password');
