@@ -137,6 +137,10 @@ h1 {
     border-style: solid;
 }
 
+.featuredRecipes a, a:visited {
+    color: black;
+}
+
 .team {
     width: 50%;
     height: 6em;
