@@ -210,13 +210,21 @@ function getSignupFormErrors(name, email, password, confirm) {
         name_input.parentElement.classList.add('incorrect');
     }
     if (email === '' || email == null) {
-        errors.push('Email is required');
-        email_input.parentElement.classList.add('incorrect');
+      errors.push('Email is required');
+      email_input.parentElement.classList.add('incorrect');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      errors.push('Invalid email format');
+      email_input.parentElement.classList.add('incorrect');
     }
+
     if (password === '' || password == null) {
         errors.push('Password is required');
         password_input.parentElement.classList.add('incorrect');
+    } else if (password.length < 8) {
+        errors.push('Your password must be at least 8 digits');
+        password_input.parentElement.classList.add('incorrect');
     }
+    
     if (confirm !== password) {
         errors.push('Passwords do not match');
         confirm_input.parentElement.classList.add('incorrect');
