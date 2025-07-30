@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Ingrédient Magique - Home</title>
+    <style>
+        .section-featured-recipe {
+            display: flex;
+            justify-content: space-evenly;
+            min-height: 20%;
+            flex-direction: row;
+            align-items: center;
+        }
+    </style>
+    <script>
+        // Search functionality filters recipes based on title and description
+        function searchRecipes() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const recipeCards = document.querySelectorAll('.recipe-card');
+
+            recipeCards.forEach(card => {
+                const title = card.querySelector('.recipe-title').textContent.toLowerCase();
+                const description = card.querySelector('.recipe-description').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+        }
+    </script>
 </head>
 
 <body>
@@ -22,9 +50,7 @@
     <div class="base">
         <h1>Ingrédient Magique</h1>
         <h3>If it's cooked with love, you'll find it here</h3>
-        <form>
-            <input type="search" id="search" name="search" placeholder="Search for any recipe"> <!--dummy search bar-->
-        </form>
+
     </div>
 
     <!-- Section 2: Website description with background image-->
@@ -41,7 +67,10 @@
 
     <!-- Section 3: Featured recipes-->
     <p class="subheadings">&nbsp;Featured Recipes</p>
-    <div class="section">
+    <div style="padding-left: 15px;">
+        <input type="search" placeholder="Search recipes..." id="searchInput" onkeyup="searchRecipes()">
+    </div>
+    <div class="section-featured-recipe">
         <a href="Recipe Webpages/tahchin.html" class="recipe-card" data-cuisine="iranian">
             <img src="images/tahchin.jpg" alt="Tahchin" class="recipe-image">
             <div class="recipe-content">
@@ -110,6 +139,7 @@
             </p>
         </div>
     </div>
+
 </body>
 
 </html>
