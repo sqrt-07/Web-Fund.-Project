@@ -103,22 +103,6 @@ h1 {
     margin-top: 20px;
 }
 
-.featuredRecipes {
-    width: 30%;
-    height: 4.5em;
-    font-size: 1.2em;
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-color: white;
-    padding: 3px;
-    margin: 5px;
-    overflow: hidden;
-    border-radius: 3px;
-    border-color: white;
-    border-style: solid;
-}
-
 /* form specific styles*/
   input[type=submit] {
     margin-top: 10px;
