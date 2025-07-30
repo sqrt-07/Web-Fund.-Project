@@ -3,10 +3,11 @@ body {
     background-color: #E5E3D9;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: auto;
+    overflow: scroll;
 }
 
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -33,14 +34,12 @@ a {
     padding: 10px;
     color: white;
     background-color: #565C56;
-    /* ADDED: Hover effect for navigation buttons */
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
 .nav p:hover {
     background-color: #404740;
-    /* Darker shade on hover */
 }
 
 .nav {
@@ -156,19 +155,50 @@ h1 {
     border-style: solid;
 }
 
+/* form specific styles*/
+  input[type=submit] {
+    margin-top: 10px;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: #45a049;
+    font: inherit;
+    color: black;
+    text-transform: uppercase;
+    transition: 150ms ease;
+  }
+
+  input[type=submit]:hover {
+    background-color: #E5E3D9;
+  }
+
+  form input:hover {
+    border: 2px solid;
+  }
+
+  form input:focus {
+    outline: none;
+    border-color: black;
+  }
+
 /* error and success messages*/
-.error {
+
+  .incorrect input {
+    border: 2px solid red;
+  }
+
+  .error {
     color: #af4242;
     background-color: #fde8ec;
     padding: 10px;
     display: none;
-}
+    border-radius: 10px 10px 10px 10px;
+  }
 
-.display-error {
+  .display-error {
     display: block;
     margin-bottom: 20px;
     transform: translateY(-20px);
-}
+  }
 
 .success {
     margin-bottom: 30px;
