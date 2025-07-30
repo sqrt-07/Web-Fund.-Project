@@ -21,7 +21,7 @@
     <!-- Section 1: Website name and search bar-->
     <div class="base">
         <h1>Ingrédient Magique</h1>
-        <h3>Description/Tagline</h3>
+        <h3>If it's cooked with love, you'll find it here</h3>
         <form>
             <input type="search" id="search" name="search" placeholder="Search for any recipe"> <!--dummy search bar-->
         </form>
@@ -31,25 +31,44 @@
     <div class="descriptionBox">
         <div class="descriptionText">
             <h2 style="padding-bottom: 2px;">&nbsp;What we do</h2>
-            <p>Ingrédient Magique brings together a growing collection of delicious, easy-to-follow recipes for every taste and occasion. Whether you're a seasoned home cook or just starting out, our recipe library offers inspiration, step-by-step instructions, and helpful tips to make cooking enjoyable and stress-free. From quick weeknight meals to special dishes for celebrations, we&apos;re here to help you discover your next favorite recipe. </p>
+            <p>Ingrédient Magique brings together a growing collection of delicious, easy-to-follow recipes for every
+                taste and occasion. Whether you're a seasoned home cook or just starting out, our recipe library offers
+                inspiration, step-by-step instructions, and helpful tips to make cooking enjoyable and stress-free. From
+                quick weeknight meals to special dishes for celebrations, we&apos;re here to help you discover your next
+                favorite recipe. </p>
         </div>
     </div>
 
     <!-- Section 3: Featured recipes-->
     <p class="subheadings">&nbsp;Featured Recipes</p>
     <div class="section">
-        <div class="featuredRecipes">
-            <img src="images/tahchin.jpg" alt="image of tahchin dish">
-            <p><a href="Recipe Webpages/tahchin.html">Tachin</a></p>
-        </div>
-        <div class="featuredRecipes">
-            <img src="images/akbarjoojeh.jpg" alt="image of akbar jujeh dish">
-            <p><a href="Recipe Webpages/akbarjoojeh.html">Akbar Jujeh</a></p>
-        </div>
-        <div class="featuredRecipes">
-            <img src="images/khoreshBademjan.jpg" alt="image of Khoresh Bademjan dish">
-            <p><a href="Recipe Webpages/khoresh_bademjan.html">Khoresh Bademjan</a></p>
-        </div>
+        <a href="Recipe Webpages/tahchin.html" class="recipe-card" data-cuisine="iranian">
+            <img src="images/tahchin.jpg" alt="Tahchin" class="recipe-image">
+            <div class="recipe-content">
+                <div class="recipe-title">Tachin</div>
+                <div class="recipe-description">A golden saffron-infused rice terrine layered with tender, spiced
+                    chicken and velvety yogurt, crowned with a crisp, caramelized crust — an elegant Persian classic
+                    celebrating harmony in every bite.</div>
+            </div>
+        </a>
+
+        <a href="Recipe Webpages/butter_chicken.html" class="recipe-card" data-cuisine="indian">
+            <img src="images/butter-chicken.jpg" alt="Butter Chicken" class="recipe-image">
+            <div class="recipe-content">
+                <div class="recipe-title">Butter Chicken</div>
+                <div class="recipe-description">Creamy, tomato-based chicken curry simmered with aromatic spices and
+                    finished with butter and cream — a quintessential Indian comfort dish loved worldwide.</div>
+            </div>
+        </a>
+
+        <a href="Recipe Webpages/pork_soup.html" class="recipe-card" data-cuisine="chinese">
+            <img src="images/pork-soup-dumplings.jpg" alt="Pork Soup Dumplings" class="recipe-image">
+            <div class="recipe-content">
+                <div class="recipe-title">Pork Soup Dumplings</div>
+                <div class="recipe-description">Delicate, steamed pork dumplings filled with a savory broth that
+                    bursts in your mouth — a Chinese dim sum favorite lovingly crafted at home.</div>
+            </div>
+        </a>
     </div>
 
     <!-- Section 4: Team members-->
