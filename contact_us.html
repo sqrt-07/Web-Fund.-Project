@@ -13,12 +13,6 @@
         overflow-y: scroll;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
     form {
         justify-content: center;
         align-items: center;
@@ -42,15 +36,6 @@
         right: 0;
     }
 
-    .nav {
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: #565C56;
-        padding: 20px;
-        width: 100%;
-        margin: 0;
-    }
-
     .container {
         border-radius: 5px;
         padding: 20px;
@@ -62,27 +47,40 @@
     textarea {
         width: 100%;
         padding: 12px;
-        border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
         resize: vertical;
         font-family: Arial, Helvetica, sans-serif;
+        transition: 150ms ease;
+        padding: 1em;
+        font: inherit;
+        border-radius: 10px 10px 10px 10px;
+        border-left: none;
+        border: 2px solid #E5E3D9;
+        transition: 150ms ease;
+    }
+
+    textarea:hover {
+        border: 2px solid;
     }
 
     input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 1000px;
+        padding: .85em 4em;
+        background-color: #45a049;
+        font: inherit;
+        color: black;
+        text-transform: uppercase;
+        transition: 150ms ease;
     }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: #E5E3D9;
     }
+
 </style>
 
 <!-- Navigation Bar -->
@@ -153,12 +151,15 @@
                 clearError();
 
                 if (form.email.value === "") {
-                    showError("email-error", "You have to enter your email");
+                    showError("email-error", "You have to enter your email.");
+                    return false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.value)) {
+                    showError("email-error", "Invalid email format.");
                     return false;
                 }
 
                 if (form.message.value === "") {
-                    showError("message-error", "Please enter your message");
+                    showError("message-error", "Please enter your message.");
                     return false;
                 }
 
